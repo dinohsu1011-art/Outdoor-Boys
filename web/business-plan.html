@@ -5,20 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Outdoor Boys — Business Plan</title>
   <meta name="description" content="High-level business plan for Outdoor Boys. Market thesis, model, financial arc, and decisions." />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,700;1,9..144,300;1,9..144,400&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <script src="i18n.js?v=3"></script>
+  <link rel="stylesheet" href="styles.css?v=5">
 </head>
 <body>
 
   <nav class="top">
     <a href="index.html" class="brand">Outdoor<em>·</em>Boys</a>
     <ul>
-      <li><a class="link" href="index.html">Field Log</a></li>
-      <li><a class="link active" href="business-plan.html">Business Plan</a></li>
-      <li><a class="link" href="regulatory.html">Regulations</a></li>
-      <li><a class="link" href="certs.html">Licenses</a></li>
+      <li><a class="link" href="index.html"><span class="en">Field Log</span><span class="zh">儀表板</span></a></li>
+      <li><a class="link active" href="business-plan.html"><span class="en">Business Plan</span><span class="zh">商業計畫</span></a></li>
+      <li><a class="link" href="regulatory.html"><span class="en">Regulations</span><span class="zh">法規</span></a></li>
+      <li><a class="link" href="certs.html"><span class="en">Licenses</span><span class="zh">證照</span></a></li>
+      <li><button class="lang-toggle" onclick="toggleLang()"><span class="en">中</span><span class="zh">EN</span></button></li>
     </ul>
   </nav>
 
@@ -26,34 +25,35 @@
 
     <!-- ===================== HERO ===================== -->
     <section class="hero" style="padding: 48px 0 72px;">
-      <div class="mono sectnum">Business plan · v1 · 21 April 2026</div>
+      <div class="mono sectnum"><span class="en">Business plan · v1 · 21 April 2026</span><span class="zh">商業計畫 · v1 · 2026 年 4 月 21 日</span></div>
 
-      <h1 style="font-family: var(--serif); font-size: 44px; font-weight: 500; letter-spacing: -0.015em; color: var(--ink); line-height: 1.1;">Business Plan</h1>
+      <h1 style="font-family: var(--serif); font-size: 44px; font-weight: 500; letter-spacing: -0.015em; color: var(--ink); line-height: 1.1;"><span class="en">Business Plan</span><span class="zh">商業計畫</span></h1>
 
       <p style="font-family: var(--serif); font-size: 18px; line-height: 1.5; color: var(--ink-body); max-width: 720px; margin-top: 20px;">
-        A premium, English- and Japanese-first river-tracing and canyoning day-trip operation based in Nanao, Yilan — distributed direct and via Klook / KKday, priced above the commodity floor, under the cost of a technical canyoning trip. Modified-go on current plan: extend Year 1 to certify and run expat trials; open the inbound channel Q3 2027.
+        <span class="en">A premium, English- and Japanese-first river-tracing and canyoning day-trip operation based in Nanao, Yilan — distributed direct and via Klook / KKday, priced above the commodity floor, under the cost of a technical canyoning trip. Modified-go on current plan: extend Year 1 to certify and run expat trials; open the inbound channel Q3 2027.</span>
+        <span class="zh">以宜蘭南澳為基地,英日文優先的高端溯溪/峽谷半日遊,直銷與 Klook / KKday 雙軌並行,定價高於入門市場、低於技術性峽谷。當前計畫修正:延長第一年完成證照與外籍友人試行,Q3 2027 正式對海外旅客開放。</span>
       </p>
 
       <div style="display:grid; grid-template-columns: repeat(4, 1fr); gap: 40px; margin-top: 48px; padding-top: 28px; border-top: 2px solid var(--ink);">
         <div>
-          <div class="kicker" style="margin-bottom:10px;">Verdict</div>
-          <div style="font-family: var(--serif); font-size: 28px; line-height:1.1; font-weight:500; color: var(--ink);">Modified-Go</div>
-          <div class="mono" style="font-size:11px; margin-top:6px;">Option B — compressed</div>
+          <div class="kicker" style="margin-bottom:10px;"><span class="en">Verdict</span><span class="zh">結論</span></div>
+          <div style="font-family: var(--serif); font-size: 28px; line-height:1.1; font-weight:500; color: var(--ink);"><span class="en">Modified-Go</span><span class="zh">修正版 — 執行</span></div>
+          <div class="mono" style="font-size:11px; margin-top:6px;"><span class="en">Option B — compressed</span><span class="zh">方案 B — 壓縮版</span></div>
         </div>
         <div>
-          <div class="kicker" style="margin-bottom:10px;">True Y1 cash need</div>
+          <div class="kicker" style="margin-bottom:10px;"><span class="en">True Y1 cash need</span><span class="zh">第一年實際資金需求</span></div>
           <div style="font-family: var(--serif); font-size: 28px; line-height:1.1; font-weight:500; color: var(--ink);">NT$800–900k</div>
-          <div class="mono" style="font-size:11px; margin-top:6px;">Headline NT$100k understates</div>
+          <div class="mono" style="font-size:11px; margin-top:6px;"><span class="en">Headline NT$100k understates</span><span class="zh">NT$100k 估計嚴重偏低</span></div>
         </div>
         <div>
-          <div class="kicker" style="margin-bottom:10px;">Year 2 revenue target</div>
+          <div class="kicker" style="margin-bottom:10px;"><span class="en">Year 2 revenue target</span><span class="zh">第二年營收目標</span></div>
           <div style="font-family: var(--serif); font-size: 28px; line-height:1.1; font-weight:500; color: var(--ink);">NT$1.6M</div>
-          <div class="mono" style="font-size:11px; margin-top:6px;">56 trips · 336 pax · +NT$746k net</div>
+          <div class="mono" style="font-size:11px; margin-top:6px;"><span class="en">56 trips · 336 pax · +NT$746k net</span><span class="zh">56 趟 · 336 人次 · 淨利 +NT$746k</span></div>
         </div>
         <div>
-          <div class="kicker" style="margin-bottom:10px;">First inbound-OTA trip</div>
+          <div class="kicker" style="margin-bottom:10px;"><span class="en">First inbound-OTA trip</span><span class="zh">首趟 OTA 海外旅客團</span></div>
           <div style="font-family: var(--serif); font-size: 28px; line-height:1.1; font-weight:500; color: var(--ink);">Q3 2027</div>
-          <div class="mono" style="font-size:11px; margin-top:6px;">Deferred from Apr 2027</div>
+          <div class="mono" style="font-size:11px; margin-top:6px;"><span class="en">Deferred from Apr 2027</span><span class="zh">從 2027 年 4 月延後</span></div>
         </div>
       </div>
     </section>
@@ -62,22 +62,22 @@
 
     <!-- ===================== 01 MARKET THESIS ===================== -->
     <section>
-      <div class="sectnum">§ 01 · Market thesis</div>
-      <h2 style="font-family: var(--serif); font-size: 32px; font-weight: 500; letter-spacing: -0.015em; color: var(--ink);">Market thesis</h2>
+      <div class="sectnum"><span class="en">§ 01 · Market thesis</span><span class="zh">§ 01 · 市場論點</span></div>
+      <h2 style="font-family: var(--serif); font-size: 32px; font-weight: 500; letter-spacing: -0.015em; color: var(--ink);"><span class="en">Market thesis</span><span class="zh">市場論點</span></h2>
 
       <div class="budget">
         <table class="ledger">
-          <tr><td class="cat">Inbound tourists 2024 · ~7.9M · target 10M by 2026</td><td class="num">TAM anchor</td></tr>
-          <tr><td class="cat">Adventure day-trip bookings · ~3% of inbound</td><td class="num">~36k / yr</td></tr>
-          <tr><td class="cat">TAM · EN / JP adventure day-trips at NT$3,500 avg</td><td class="num">NT$ 126M</td></tr>
-          <tr><td class="cat">SAM · Yilan + Taipei-origin · premium tier NT$4k+</td><td class="num">NT$ 19M</td></tr>
-          <tr class="total"><td>Target capture · 3–5% of SAM</td><td class="num">NT$ 570–950k / yr</td></tr>
+          <tr><td class="cat"><span class="en">Inbound tourists 2024 · ~7.9M · target 10M by 2026</span><span class="zh">2024 年入境旅客 · 約 790 萬 · 2026 年目標 1,000 萬</span></td><td class="num"><span class="en">TAM anchor</span><span class="zh">市場基準</span></td></tr>
+          <tr><td class="cat"><span class="en">Adventure day-trip bookings · ~3% of inbound</span><span class="zh">冒險型一日遊預訂 · 約入境 3%</span></td><td class="num"><span class="en">~36k / yr</span><span class="zh">約 3.6 萬 / 年</span></td></tr>
+          <tr><td class="cat"><span class="en">TAM · EN / JP adventure day-trips at NT$3,500 avg</span><span class="zh">TAM · 英 / 日語冒險一日遊均價 NT$3,500</span></td><td class="num">NT$ 126M</td></tr>
+          <tr><td class="cat"><span class="en">SAM · Yilan + Taipei-origin · premium tier NT$4k+</span><span class="zh">SAM · 宜蘭 + 台北出發 · 高端 NT$4k+</span></td><td class="num">NT$ 19M</td></tr>
+          <tr class="total"><td><span class="en">Target capture · 3–5% of SAM</span><span class="zh">目標佔有 · SAM 的 3–5%</span></td><td class="num">NT$ 570–950k / <span class="en">yr</span><span class="zh">年</span></td></tr>
         </table>
 
         <div class="caution">
-          <div class="tag">Open wedge</div>
-          <p>The NT$4,500–5,500 half-day slot with Taipei pickup, English + Japanese delivery, and instant-book online is empty. Commodity operators cluster at NT$2,200–2,400 with form-based inquiry. Technical canyoning (JUST, Shawa) sits at NT$4,800+ but reads Chinese-first. Realistic defensive window before a funded incumbent copies it: <strong style="color: var(--ink);">12–24 months</strong>.</p>
-          <p style="margin-top: 14px;">Physical capacity limits this to a 150–250 trip-pax / year business with pricing power. Not a volume play. A lifestyle-plus shape, not a venture shape.</p>
+          <div class="tag"><span class="en">Open wedge</span><span class="zh">市場缺口</span></div>
+          <p><span class="en">The NT$4,500–5,500 half-day slot with Taipei pickup, English + Japanese delivery, and instant-book online is empty. Commodity operators cluster at NT$2,200–2,400 with form-based inquiry. Technical canyoning (JUST, Shawa) sits at NT$4,800+ but reads Chinese-first. Realistic defensive window before a funded incumbent copies it: <strong style="color: var(--ink);">12–24 months</strong>.</span><span class="zh">NT$4,500–5,500 的半日遊定位 — 含台北接送、英日文服務、即時線上訂購 — 目前市場空缺。低價業者集中在 NT$2,200–2,400 且須填表詢問。技術性峽谷(JUST、Shawa)約 NT$4,800+,但以中文為主。被有資金的業者複製之前的合理防禦窗口:<strong style="color: var(--ink);">12–24 個月</strong>。</span></p>
+          <p style="margin-top: 14px;"><span class="en">Physical capacity limits this to a 150–250 trip-pax / year business with pricing power. Not a volume play. A lifestyle-plus shape, not a venture shape.</span><span class="zh">實體產能上限約 150–250 人次/年,具定價力,非走量模式,是生活方式型事業,非創投型事業。</span></p>
         </div>
       </div>
     </section>
@@ -86,24 +86,24 @@
 
     <!-- ===================== 02 BUSINESS MODEL ===================== -->
     <section>
-      <div class="sectnum">§ 02 · Business model</div>
-      <h2 style="font-family: var(--serif); font-size: 32px; font-weight: 500; letter-spacing: -0.015em; color: var(--ink);">Business model</h2>
+      <div class="sectnum"><span class="en">§ 02 · Business model</span><span class="zh">§ 02 · 商業模式</span></div>
+      <h2 style="font-family: var(--serif); font-size: 32px; font-weight: 500; letter-spacing: -0.015em; color: var(--ink);"><span class="en">Business model</span><span class="zh">商業模式</span></h2>
 
       <div class="budget">
         <table class="ledger">
-          <tr><td class="cat">Entity · 有限公司 · NT$500k paid-in</td><td class="num">Activity provider</td></tr>
-          <tr><td class="cat">Travel agency license (甲種 · NT$6M capital)</td><td class="num">Skip</td></tr>
-          <tr><td class="cat">Foreign-tourist distribution</td><td class="num">Klook · KKday</td></tr>
-          <tr><td class="cat">OTA take · blended assumption</td><td class="num">22.5%</td></tr>
-          <tr><td class="cat">Expat / direct channel</td><td class="num">Own site · Stripe</td></tr>
-          <tr><td class="cat">Price anchor · half-day per pax</td><td class="num">NT$ 4,800</td></tr>
-          <tr><td class="cat">Lead product · 溯溪 day trips · Nanao</td><td class="num">Y1 single-SKU</td></tr>
-          <tr class="total"><td>Secondary SKUs · added Y2+</td><td class="num">Canyoning · B2B</td></tr>
+          <tr><td class="cat"><span class="en">Entity · 有限公司 · NT$500k paid-in</span><span class="zh">公司型態 · 有限公司 · 實收資本 NT$500k</span></td><td class="num"><span class="en">Activity provider</span><span class="zh">活動供應商</span></td></tr>
+          <tr><td class="cat"><span class="en">Travel agency license (甲種 · NT$6M capital)</span><span class="zh">旅行業執照(甲種 · NT$600 萬資本)</span></td><td class="num"><span class="en">Skip</span><span class="zh">跳過</span></td></tr>
+          <tr><td class="cat"><span class="en">Foreign-tourist distribution</span><span class="zh">外籍旅客通路</span></td><td class="num">Klook · KKday</td></tr>
+          <tr><td class="cat"><span class="en">OTA take · blended assumption</span><span class="zh">OTA 抽成 · 混合假設</span></td><td class="num">22.5%</td></tr>
+          <tr><td class="cat"><span class="en">Expat / direct channel</span><span class="zh">外籍人士 / 直銷通路</span></td><td class="num"><span class="en">Own site · Stripe</span><span class="zh">自架網站 · Stripe</span></td></tr>
+          <tr><td class="cat"><span class="en">Price anchor · half-day per pax</span><span class="zh">定價錨點 · 半日 / 人</span></td><td class="num">NT$ 4,800</td></tr>
+          <tr><td class="cat"><span class="en">Lead product · 溯溪 day trips · Nanao</span><span class="zh">主力商品 · 溯溪一日遊 · 南澳</span></td><td class="num"><span class="en">Y1 single-SKU</span><span class="zh">第一年單一 SKU</span></td></tr>
+          <tr class="total"><td><span class="en">Secondary SKUs · added Y2+</span><span class="zh">次要 SKU · 第二年起新增</span></td><td class="num"><span class="en">Canyoning · B2B</span><span class="zh">峽谷 · B2B</span></td></tr>
         </table>
 
         <div class="caution">
-          <div class="tag">Wedge details</div>
-          <p><strong style="color: var(--ink);">Instant-book online.</strong> Every named TW competitor routes through a contact form or DM. Shipping a real checkout is immediate differentiation. <strong style="color: var(--ink);">Japanese channel.</strong> ~2M annual Japanese visitors; nobody sells in their language. Apple's edge is structural, not cosmetic. <strong style="color: var(--ink);">Yilan base.</strong> JUST is Tamsui-north, Shark Band is Hualien, Canyons Taiwan has no Yilan partner — Yilan / Nan'ao is whitespace.</p>
+          <div class="tag"><span class="en">Wedge details</span><span class="zh">切入點細節</span></div>
+          <p><strong style="color: var(--ink);"><span class="en">Instant-book online.</span><span class="zh">即時線上訂購。</span></strong> <span class="en">Every named TW competitor routes through a contact form or DM. Shipping a real checkout is immediate differentiation.</span><span class="zh">所有已知台灣競爭者均需填表或私訊。上線真正的結帳流程即為立即差異化。</span> <strong style="color: var(--ink);"><span class="en">Japanese channel.</span><span class="zh">日本市場通路。</span></strong> <span class="en">~2M annual Japanese visitors; nobody sells in their language. Apple's edge is structural, not cosmetic.</span><span class="zh">每年約 200 萬日本旅客來台,無人以日文銷售。Apple 的優勢是結構性的,非表面的。</span> <strong style="color: var(--ink);"><span class="en">Yilan base.</span><span class="zh">宜蘭基地。</span></strong> <span class="en">JUST is Tamsui-north, Shark Band is Hualien, Canyons Taiwan has no Yilan partner — Yilan / Nan'ao is whitespace.</span><span class="zh">JUST 在淡水北部,Shark Band 在花蓮,Canyons Taiwan 無宜蘭合作 — 宜蘭 / 南澳是空白地帶。</span></p>
         </div>
       </div>
     </section>
@@ -112,32 +112,32 @@
 
     <!-- ===================== 03 FINANCIAL ARC ===================== -->
     <section>
-      <div class="sectnum">§ 03 · 3-year financial arc</div>
-      <h2 style="font-family: var(--serif); font-size: 32px; font-weight: 500; letter-spacing: -0.015em; color: var(--ink);">3-year financial arc</h2>
+      <div class="sectnum"><span class="en">§ 03 · 3-year financial arc</span><span class="zh">§ 03 · 三年財務預測</span></div>
+      <h2 style="font-family: var(--serif); font-size: 32px; font-weight: 500; letter-spacing: -0.015em; color: var(--ink);"><span class="en">3-year financial arc</span><span class="zh">三年財務預測</span></h2>
 
       <div class="budget">
         <table class="ledger">
           <tr style="border-top: 2px solid var(--ink);">
-            <td class="cat" style="font-family: var(--mono); font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--mute);">Line item</td>
-            <td class="num" style="font-family: var(--mono); font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--mute);">Y1 · Y2 · Y3</td>
+            <td class="cat" style="font-family: var(--mono); font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--mute);"><span class="en">Line item</span><span class="zh">項目</span></td>
+            <td class="num" style="font-family: var(--mono); font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--mute);"><span class="en">Y1 · Y2 · Y3</span><span class="zh">第一年 · 第二年 · 第三年</span></td>
           </tr>
-          <tr><td class="cat">Trips · 12 · 56 · 98</td><td class="num">Pax 72 · 336 · 588</td></tr>
-          <tr><td class="cat">Gross revenue</td><td class="num">346 · 1,613 · 2,822 k</td></tr>
-          <tr><td class="cat">Less OTA + processing</td><td class="num">(65) · (302) · (529) k</td></tr>
-          <tr><td class="cat">Net revenue</td><td class="num">281 · 1,310 · 2,293 k</td></tr>
-          <tr><td class="cat">Paid guide fees</td><td class="num">0 · (98) · (274) k</td></tr>
-          <tr><td class="cat">Per-trip variable · fuel, snacks, permits</td><td class="num">(42) · (196) · (343) k</td></tr>
-          <tr><td class="cat">Insurance · annualized</td><td class="num">(45) · (55) · (70) k</td></tr>
-          <tr><td class="cat">Gear amortization + replen</td><td class="num">(15) · (40) · (60) k</td></tr>
-          <tr><td class="cat">Entity · accounting · website · marketing</td><td class="num">(60) · (175) · (300) k</td></tr>
-          <tr><td class="cat">Founder comp · one FT</td><td class="num">0 · 0 · (600) k</td></tr>
-          <tr class="total"><td>Net</td><td class="num">+119 · +746 · +646 k</td></tr>
+          <tr><td class="cat"><span class="en">Trips · 12 · 56 · 98</span><span class="zh">出團數 · 12 · 56 · 98</span></td><td class="num"><span class="en">Pax 72 · 336 · 588</span><span class="zh">人次 72 · 336 · 588</span></td></tr>
+          <tr><td class="cat"><span class="en">Gross revenue</span><span class="zh">毛收入</span></td><td class="num">346 · 1,613 · 2,822 k</td></tr>
+          <tr><td class="cat"><span class="en">Less OTA + processing</span><span class="zh">減 OTA + 金流手續</span></td><td class="num">(65) · (302) · (529) k</td></tr>
+          <tr><td class="cat"><span class="en">Net revenue</span><span class="zh">淨收入</span></td><td class="num">281 · 1,310 · 2,293 k</td></tr>
+          <tr><td class="cat"><span class="en">Paid guide fees</span><span class="zh">外聘嚮導費</span></td><td class="num">0 · (98) · (274) k</td></tr>
+          <tr><td class="cat"><span class="en">Per-trip variable · fuel, snacks, permits</span><span class="zh">每趟變動成本 · 油資、點心、許可</span></td><td class="num">(42) · (196) · (343) k</td></tr>
+          <tr><td class="cat"><span class="en">Insurance · annualized</span><span class="zh">保險 · 年化</span></td><td class="num">(45) · (55) · (70) k</td></tr>
+          <tr><td class="cat"><span class="en">Gear amortization + replen</span><span class="zh">裝備攤銷 + 補充</span></td><td class="num">(15) · (40) · (60) k</td></tr>
+          <tr><td class="cat"><span class="en">Entity · accounting · website · marketing</span><span class="zh">公司 · 會計 · 網站 · 行銷</span></td><td class="num">(60) · (175) · (300) k</td></tr>
+          <tr><td class="cat"><span class="en">Founder comp · one FT</span><span class="zh">創辦人薪酬 · 一位全職</span></td><td class="num">0 · 0 · (600) k</td></tr>
+          <tr class="total"><td><span class="en">Net</span><span class="zh">淨利</span></td><td class="num">+119 · +746 · +646 k</td></tr>
         </table>
 
         <div class="caution">
-          <div class="tag">What the math says</div>
-          <p><strong style="color: var(--ink);">Break-even ~16 trips / yr</strong> on Year 2 cost base. Hit by June of Year 2. One full-time founder salary absorbable in Year 3; two full-time salaries need Year 4+ or a second SKU (corporate team-building, B2B whitelabel) or a second base.</p>
-          <p style="margin-top: 14px;"><strong style="color: var(--ink);">Cash gap.</strong> Year 1 modeled cost is NT$162k against a headline NT$100k budget. Add paid-in capital commitment and realistic buffer and true founding cash need is <strong style="color: var(--ink);">NT$800–900k, not NT$600k.</strong> Close via founder pro-rata top-up or by delaying entity / insurance to Q4 2026.</p>
+          <div class="tag"><span class="en">What the math says</span><span class="zh">數字的意義</span></div>
+          <p><strong style="color: var(--ink);"><span class="en">Break-even ~16 trips / yr</span><span class="zh">損益平衡約 16 趟 / 年</span></strong> <span class="en">on Year 2 cost base. Hit by June of Year 2. One full-time founder salary absorbable in Year 3; two full-time salaries need Year 4+ or a second SKU (corporate team-building, B2B whitelabel) or a second base.</span><span class="zh">以第二年成本基礎計算,預計第二年 6 月前達到。第三年可吸收一位全職創辦人薪酬;兩位全職需第四年以上,或第二條 SKU(企業團建、B2B 白標),或第二個基地。</span></p>
+          <p style="margin-top: 14px;"><strong style="color: var(--ink);"><span class="en">Cash gap.</span><span class="zh">資金缺口。</span></strong> <span class="en">Year 1 modeled cost is NT$162k against a headline NT$100k budget. Add paid-in capital commitment and realistic buffer and true founding cash need is <strong style="color: var(--ink);">NT$800–900k, not NT$600k.</strong> Close via founder pro-rata top-up or by delaying entity / insurance to Q4 2026.</span><span class="zh">第一年預估成本 NT$162k,高於表定 NT$100k 預算。加上實收資本承諾與合理緩衝,真實創業資金需求為 <strong style="color: var(--ink);">NT$800–900k,而非 NT$600k</strong>。透過創辦人按比例追加,或將公司設立 / 保險延至 Q4 2026 填補。</span></p>
         </div>
       </div>
     </section>
@@ -146,21 +146,21 @@
 
     <!-- ===================== 04 REVENUE SEQUENCING ===================== -->
     <section>
-      <div class="sectnum">§ 04 · Revenue sequencing</div>
-      <h2 style="font-family: var(--serif); font-size: 32px; font-weight: 500; letter-spacing: -0.015em; color: var(--ink);">Revenue sequencing</h2>
+      <div class="sectnum"><span class="en">§ 04 · Revenue sequencing</span><span class="zh">§ 04 · 收入排序</span></div>
+      <h2 style="font-family: var(--serif); font-size: 32px; font-weight: 500; letter-spacing: -0.015em; color: var(--ink);"><span class="en">Revenue sequencing</span><span class="zh">收入排序</span></h2>
 
       <div class="budget">
         <table class="ledger">
-          <tr><td class="cat"><strong style="color: var(--ink);">Year 1</strong> · guiding (unpaid expat trials) + content channel</td><td class="num">Prove ops</td></tr>
-          <tr><td class="cat"><strong style="color: var(--ink);">Year 2</strong> · paid guiding on OTA + B2B whitelabel + corporate team-building</td><td class="num">Unlock scale</td></tr>
-          <tr><td class="cat"><strong style="color: var(--ink);">Year 3</strong> · route portfolio + Japanese channel + BnB decision gate</td><td class="num">Expand</td></tr>
-          <tr class="total"><td>Deferred · pure-guiding ceiling ~NT$175–270k / founder / yr</td><td class="num">Year 4+</td></tr>
+          <tr><td class="cat"><strong style="color: var(--ink);"><span class="en">Year 1</span><span class="zh">第一年</span></strong> · <span class="en">guiding (unpaid expat trials) + content channel</span><span class="zh">帶隊(免費外籍試行) + 內容通路</span></td><td class="num"><span class="en">Prove ops</span><span class="zh">驗證運營</span></td></tr>
+          <tr><td class="cat"><strong style="color: var(--ink);"><span class="en">Year 2</span><span class="zh">第二年</span></strong> · <span class="en">paid guiding on OTA + B2B whitelabel + corporate team-building</span><span class="zh">OTA 付費帶隊 + B2B 白標 + 企業團建</span></td><td class="num"><span class="en">Unlock scale</span><span class="zh">解鎖規模</span></td></tr>
+          <tr><td class="cat"><strong style="color: var(--ink);"><span class="en">Year 3</span><span class="zh">第三年</span></strong> · <span class="en">route portfolio + Japanese channel + BnB decision gate</span><span class="zh">路線組合 + 日本通路 + 民宿決策門</span></td><td class="num"><span class="en">Expand</span><span class="zh">擴張</span></td></tr>
+          <tr class="total"><td><span class="en">Deferred · pure-guiding ceiling ~NT$175–270k / founder / yr</span><span class="zh">延後 · 純帶隊上限約 NT$175–270k / 創辦人 / 年</span></td><td class="num"><span class="en">Year 4+</span><span class="zh">第四年以後</span></td></tr>
         </table>
 
         <div class="caution">
-          <div class="tag">Why not BnB first</div>
-          <p>A Nanao basecamp is the most emotionally compelling second stream but the wrong first move. 民宿 license requires owner-occupancy (no outsourced manager), rent path needs NT$1.5–2M cash before opening, buy path NT$10–14M. Illegal-Airbnb fines run NT$100k–2M. No small TW guiding startup has succeeded by leading with lodging as Phase 2. Reserved as Year 3 gate-only.</p>
-          <p style="margin-top: 14px;"><strong style="color: var(--ink);">The real Year 2 unlock:</strong> corporate team-building (weekday utilization, 2–3× per-pax price, lower weather risk) and B2B whitelabel (operate river-tracing trips on behalf of licensed travel agencies — their sales, our guiding). Both break the guide-hour ceiling without capital.</p>
+          <div class="tag"><span class="en">Why not BnB first</span><span class="zh">為何不先做民宿</span></div>
+          <p><span class="en">A Nanao basecamp is the most emotionally compelling second stream but the wrong first move. 民宿 license requires owner-occupancy (no outsourced manager), rent path needs NT$1.5–2M cash before opening, buy path NT$10–14M. Illegal-Airbnb fines run NT$100k–2M. No small TW guiding startup has succeeded by leading with lodging as Phase 2. Reserved as Year 3 gate-only.</span><span class="zh">南澳基地在情感上是最吸引人的第二條收入,但不是正確的第一步。民宿執照需業主自住(不能委外管理),租屋路線開業前需 NT$150–200 萬,買房路線需 NT$1,000–1,400 萬。非法 Airbnb 罰款 NT$10–200 萬。沒有小型台灣嚮導新創以住宿作為第二階段而成功。保留為第三年決策門。</span></p>
+          <p style="margin-top: 14px;"><strong style="color: var(--ink);"><span class="en">The real Year 2 unlock:</span><span class="zh">第二年真正的突破點:</span></strong> <span class="en">corporate team-building (weekday utilization, 2–3× per-pax price, lower weather risk) and B2B whitelabel (operate river-tracing trips on behalf of licensed travel agencies — their sales, our guiding). Both break the guide-hour ceiling without capital.</span><span class="zh">企業團建(平日利用率、每人價格提升 2–3 倍、天氣風險較低)與 B2B 白標(替持牌旅行社執行溯溪行程 — 他們銷售、我們帶隊)。兩者皆可在不需資本的情況下突破帶隊時數上限。</span></p>
         </div>
       </div>
     </section>
@@ -169,25 +169,25 @@
 
     <!-- ===================== 05 STRATEGIC RISKS ===================== -->
     <section>
-      <div class="sectnum">§ 05 · Top strategic risks</div>
-      <h2 style="font-family: var(--serif); font-size: 32px; font-weight: 500; letter-spacing: -0.015em; color: var(--ink);">Top strategic risks</h2>
+      <div class="sectnum"><span class="en">§ 05 · Top strategic risks</span><span class="zh">§ 05 · 主要策略風險</span></div>
+      <h2 style="font-family: var(--serif); font-size: 32px; font-weight: 500; letter-spacing: -0.015em; color: var(--ink);"><span class="en">Top strategic risks</span><span class="zh">主要策略風險</span></h2>
 
       <div class="budget">
         <table class="ledger">
-          <tr><td class="cat"><strong style="color: var(--ink);">Apple runway</strong> · unpaid through Q4 2026 · best salesperson, only JP channel</td><td class="num">P: H · I: H</td></tr>
-          <tr><td class="cat"><strong style="color: var(--ink);">旅行業 reclassification</strong> · Taipei pickup may trigger NT$6M capital rule</td><td class="num">P: M · I: H</td></tr>
-          <tr><td class="cat"><strong style="color: var(--ink);">Insurance bind</strong> · carriers may refuse 溯溪 cover for &lt;2yr operator</td><td class="num">P: M · I: H</td></tr>
-          <tr><td class="cat"><strong style="color: var(--ink);">Nanao route closure</strong> · 部落 revocation could remove anchor SKU overnight</td><td class="num">P: M · I: H</td></tr>
-          <tr><td class="cat"><strong style="color: var(--ink);">Luke peak-season conflict</strong> · day job vs. July weekend demand</td><td class="num">P: M · I: H</td></tr>
-          <tr class="total"><td>See feasibility doc for full 15-item register + mitigations</td><td class="num">→ docs</td></tr>
+          <tr><td class="cat"><strong style="color: var(--ink);">Apple <span class="en">runway</span><span class="zh">現金跑道</span></strong> · <span class="en">unpaid through Q4 2026 · best salesperson, only JP channel</span><span class="zh">Q4 2026 前無薪 · 最強業務,唯一日本通路</span></td><td class="num"><span class="en">P: H · I: H</span><span class="zh">概率:高 · 影響:高</span></td></tr>
+          <tr><td class="cat"><strong style="color: var(--ink);">旅行業 <span class="en">reclassification</span><span class="zh">重新認定</span></strong> · <span class="en">Taipei pickup may trigger NT$6M capital rule</span><span class="zh">台北接送可能觸發 NT$600 萬資本規定</span></td><td class="num"><span class="en">P: M · I: H</span><span class="zh">概率:中 · 影響:高</span></td></tr>
+          <tr><td class="cat"><strong style="color: var(--ink);"><span class="en">Insurance bind</span><span class="zh">保險無法核保</span></strong> · <span class="en">carriers may refuse 溯溪 cover for &lt;2yr operator</span><span class="zh">產險公司可能拒保不滿 2 年之業者</span></td><td class="num"><span class="en">P: M · I: H</span><span class="zh">概率:中 · 影響:高</span></td></tr>
+          <tr><td class="cat"><strong style="color: var(--ink);"><span class="en">Nanao route closure</span><span class="zh">南澳路線關閉</span></strong> · <span class="en">部落 revocation could remove anchor SKU overnight</span><span class="zh">部落撤回授權可能一夜間移除主力 SKU</span></td><td class="num"><span class="en">P: M · I: H</span><span class="zh">概率:中 · 影響:高</span></td></tr>
+          <tr><td class="cat"><strong style="color: var(--ink);">Luke <span class="en">peak-season conflict</span><span class="zh">旺季衝突</span></strong> · <span class="en">day job vs. July weekend demand</span><span class="zh">正職 vs. 七月週末需求</span></td><td class="num"><span class="en">P: M · I: H</span><span class="zh">概率:中 · 影響:高</span></td></tr>
+          <tr class="total"><td><span class="en">See feasibility doc for full 15-item register + mitigations</span><span class="zh">詳見可行性文件:15 條完整風險清單 + 緩解措施</span></td><td class="num"><span class="en">→ docs</span><span class="zh">→ 文件</span></td></tr>
         </table>
 
         <div class="caution">
-          <div class="tag">Kill criteria (formalized)</div>
-          <p>· If by <strong style="color: var(--ink);">30 Sep 2026</strong> no public-liability cover including 溯溪 binds for &lt;NT$60k / yr, pause entity filing.</p>
-          <p style="margin-top: 10px;">· If by <strong style="color: var(--ink);">31 Dec 2026</strong> no founder has 山域嚮導—溯溪類, pause paid operations; unpaid trials continue.</p>
-          <p style="margin-top: 10px;">· If by <strong style="color: var(--ink);">31 Mar 2027</strong> fewer than 10 paid foreign-tourist trips across channels, pivot to expat + content-first for +6 months.</p>
-          <p style="margin-top: 10px;">· If Duncan's FIA denied, restructure as 3-founder TW entity with Duncan as US-side IP licensor, not shareholder.</p>
+          <div class="tag"><span class="en">Kill criteria (formalized)</span><span class="zh">停止條件(正式化)</span></div>
+          <p>· <span class="en">If by <strong style="color: var(--ink);">30 Sep 2026</strong> no public-liability cover including 溯溪 binds for &lt;NT$60k / yr, pause entity filing.</span><span class="zh">若 <strong style="color: var(--ink);">2026 年 9 月 30 日</strong>前無法以低於 NT$6 萬 / 年取得含 溯溪 的公共意外責任保險,暫停公司設立。</span></p>
+          <p style="margin-top: 10px;">· <span class="en">If by <strong style="color: var(--ink);">31 Dec 2026</strong> no founder has 山域嚮導—溯溪類, pause paid operations; unpaid trials continue.</span><span class="zh">若 <strong style="color: var(--ink);">2026 年 12 月 31 日</strong>前無創辦人持有 山域嚮導 — 溯溪類,暫停付費出團;免費試行繼續。</span></p>
+          <p style="margin-top: 10px;">· <span class="en">If by <strong style="color: var(--ink);">31 Mar 2027</strong> fewer than 10 paid foreign-tourist trips across channels, pivot to expat + content-first for +6 months.</span><span class="zh">若 <strong style="color: var(--ink);">2027 年 3 月 31 日</strong>前各通路付費外籍旅客團未達 10 趟,轉為以外籍人士 + 內容優先策略,再 +6 個月。</span></p>
+          <p style="margin-top: 10px;">· <span class="en">If Duncan's FIA denied, restructure as 3-founder TW entity with Duncan as US-side IP licensor, not shareholder.</span><span class="zh">若 Duncan 的 FIA 申請被拒,重組為 3 位台籍創辦人的有限公司,Duncan 以美方 IP 授權人而非股東身分參與。</span></p>
         </div>
       </div>
     </section>
@@ -196,54 +196,55 @@
 
     <!-- ===================== 06 PATH + DECISIONS ===================== -->
     <section>
-      <div class="sectnum">§ 06 · Recommended path</div>
-      <h2 style="font-family: var(--serif); font-size: 32px; font-weight: 500; letter-spacing: -0.015em; color: var(--ink);">Recommended path · Option B</h2>
+      <div class="sectnum"><span class="en">§ 06 · Recommended path</span><span class="zh">§ 06 · 建議路徑</span></div>
+      <h2 style="font-family: var(--serif); font-size: 32px; font-weight: 500; letter-spacing: -0.015em; color: var(--ink);"><span class="en">Recommended path · Option B</span><span class="zh">建議路徑 · 方案 B</span></h2>
 
       <p style="font-family: var(--serif); font-size: 17px; line-height: 1.6; color: var(--ink-body); max-width: 720px;">
-        Compress and defer. Use Q2–Q4 2026 for certs, entity, insurance, and friends-and-expat-only paid trips at near-cost. Open Klook / KKday only after 20+ expat trips banked and 10+ Google reviews. First foreign-tourist trip reframed from April 2027 to Q3 2027. This is not a slower plan — it is a plan that actually closes.
+        <span class="en">Compress and defer. Use Q2–Q4 2026 for certs, entity, insurance, and friends-and-expat-only paid trips at near-cost. Open Klook / KKday only after 20+ expat trips banked and 10+ Google reviews. First foreign-tourist trip reframed from April 2027 to Q3 2027. This is not a slower plan — it is a plan that actually closes.</span>
+        <span class="zh">壓縮與延後。Q2–Q4 2026 用於取得證照、設立公司、投保,以及近成本價的親友/外籍人士付費試行。待累積 20+ 趟外籍友人行程、10+ 則 Google 評價後,才開通 Klook / KKday。首趟外籍旅客團從 2027 年 4 月調整為 Q3 2027。這不是更慢的計畫 — 而是真正能落地的計畫。</span>
       </p>
 
       <div class="budget" style="margin-top: 32px;">
         <div class="caution">
-          <div class="tag">Five things we must do differently</div>
-          <p>1 · <strong style="color: var(--ink);">Raise real cash target</strong> to NT$800–900k. Each founder pre-commits NT$50–75k beyond current budget, or formalize a capital-call clause in the Founders Agreement.</p>
-          <p style="margin-top: 10px;">2 · <strong style="color: var(--ink);">Lawyer meeting moves to this month</strong> (Apr 2026). Do not spend NT$35k on cert enrollment before the Taipei-pickup line is lawyer-confirmed.</p>
-          <p style="margin-top: 10px;">3 · <strong style="color: var(--ink);">Apple retainer from Q3 2026.</strong> NT$15–20k / month from founder pool.</p>
-          <p style="margin-top: 10px;">4 · <strong style="color: var(--ink);">Insurance underwriter conversations Q2 2026</strong>, not Q3. Gating constraint.</p>
-          <p style="margin-top: 10px;">5 · <strong style="color: var(--ink);">"April 2027" reframed</strong> as first KKday-channel trip, not first foreign-tourist trip. Expat word-of-mouth trips begin Q4 2026.</p>
+          <div class="tag"><span class="en">Five things we must do differently</span><span class="zh">五件必須改變的事</span></div>
+          <p>1 · <strong style="color: var(--ink);"><span class="en">Raise real cash target</span><span class="zh">提高實際資金目標</span></strong> <span class="en">to NT$800–900k. Each founder pre-commits NT$50–75k beyond current budget, or formalize a capital-call clause in the Founders Agreement.</span><span class="zh">至 NT$800–900k。每位創辦人在現有預算外預先承諾 NT$5–7.5 萬,或在創辦人協議中正式加入追加資本條款。</span></p>
+          <p style="margin-top: 10px;">2 · <strong style="color: var(--ink);"><span class="en">Lawyer meeting moves to this month</span><span class="zh">律師會議提前至本月</span></strong> <span class="en">(Apr 2026). Do not spend NT$35k on cert enrollment before the Taipei-pickup line is lawyer-confirmed.</span><span class="zh">(2026 年 4 月)。在台北接送的法律界定律師確認前,不得花費 NT$3.5 萬在證照報名上。</span></p>
+          <p style="margin-top: 10px;">3 · <strong style="color: var(--ink);">Apple <span class="en">retainer from Q3 2026.</span><span class="zh">Q3 2026 起支付顧問費。</span></strong> <span class="en">NT$15–20k / month from founder pool.</span><span class="zh">NT$1.5–2 萬 / 月,來自創辦人出資。</span></p>
+          <p style="margin-top: 10px;">4 · <strong style="color: var(--ink);"><span class="en">Insurance underwriter conversations Q2 2026</span><span class="zh">Q2 2026 開始接觸保險核保</span></strong><span class="en">, not Q3. Gating constraint.</span><span class="zh">,而非 Q3。這是卡關的關鍵限制。</span></p>
+          <p style="margin-top: 10px;">5 · <strong style="color: var(--ink);">"<span class="en">April 2027" reframed</span><span class="zh">2027 年 4 月」重新定義</span></strong> <span class="en">as first KKday-channel trip, not first foreign-tourist trip. Expat word-of-mouth trips begin Q4 2026.</span><span class="zh">為首趟 KKday 通路出團,而非首趟外籍旅客行程。Q4 2026 開始進行外籍口碑行程。</span></p>
         </div>
       </div>
 
       <div class="budget" style="margin-top: 24px;">
         <div class="caution">
-          <div class="tag">Decisions for first weekly sync</div>
-          <p>1 · Option A / B / C — converge. Recommendation: B.</p>
-          <p style="margin-top: 8px;">2 · Real cash commitment per founder — NT$200–250k over 18 months, yes / no.</p>
-          <p style="margin-top: 8px;">3 · Apple retainer — yes / no / when / how much / from where.</p>
-          <p style="margin-top: 8px;">4 · Equity split + vesting. Lazy-correct: equal quarters, 4-yr vest, 1-yr cliff. Founders Agreement signed by end Q2.</p>
-          <p style="margin-top: 8px;">5 · Geographic base — Yilan / Nanao locked, or Hualien holdout?</p>
-          <p style="margin-top: 8px;">6 · Taipei pickup go / no-go, pending lawyer. Who books the lawyer this week.</p>
-          <p style="margin-top: 8px;">7 · Brand name — "Outdoor Boys" or rename pending Apple's JP-market read.</p>
-          <p style="margin-top: 8px;">8 · Formal safety / risk officer + Tue–Fri daytime CS owner.</p>
+          <div class="tag"><span class="en">Decisions for first weekly sync</span><span class="zh">首次週會待定事項</span></div>
+          <p>1 · <span class="en">Option A / B / C — converge. Recommendation: B.</span><span class="zh">方案 A / B / C — 收斂決定。建議:B。</span></p>
+          <p style="margin-top: 8px;">2 · <span class="en">Real cash commitment per founder — NT$200–250k over 18 months, yes / no.</span><span class="zh">每位創辦人實際資金承諾 — 18 個月內 NT$20–25 萬,是/否。</span></p>
+          <p style="margin-top: 8px;">3 · Apple <span class="en">retainer — yes / no / when / how much / from where.</span><span class="zh">顧問費 — 是/否/何時/多少/來源。</span></p>
+          <p style="margin-top: 8px;">4 · <span class="en">Equity split + vesting. Lazy-correct: equal quarters, 4-yr vest, 1-yr cliff. Founders Agreement signed by end Q2.</span><span class="zh">股權比例 + 歸屬。懶人最優解:四等分,4 年歸屬,1 年懸崖。創辦人協議於 Q2 底前簽署。</span></p>
+          <p style="margin-top: 8px;">5 · <span class="en">Geographic base — Yilan / Nanao locked, or Hualien holdout?</span><span class="zh">地理基地 — 宜蘭 / 南澳確認,或仍有花蓮選項?</span></p>
+          <p style="margin-top: 8px;">6 · <span class="en">Taipei pickup go / no-go, pending lawyer. Who books the lawyer this week.</span><span class="zh">台北接送可行/不可行,待律師確認。誰本週預約律師。</span></p>
+          <p style="margin-top: 8px;">7 · <span class="en">Brand name — "Outdoor Boys" or rename pending Apple's JP-market read.</span><span class="zh">品牌名 — 沿用「Outdoor Boys」,或待 Apple 的日本市場判讀後更名。</span></p>
+          <p style="margin-top: 8px;">8 · <span class="en">Formal safety / risk officer + Tue–Fri daytime CS owner.</span><span class="zh">正式安全 / 風險主責人 + 週二至五日間客服負責人。</span></p>
         </div>
       </div>
     </section>
 
     <hr class="rule">
 
-    <!-- ===================== FOOTER LINKS TO SUPPORTING DOCS ===================== -->
+    <!-- ===================== 07 SUPPORTING DOCS ===================== -->
     <section>
-      <div class="sectnum">§ 07 · Supporting research</div>
-      <h2 style="font-family: var(--serif); font-size: 32px; font-weight: 500; letter-spacing: -0.015em; color: var(--ink);">Supporting research</h2>
+      <div class="sectnum"><span class="en">§ 07 · Supporting research</span><span class="zh">§ 07 · 支援研究</span></div>
+      <h2 style="font-family: var(--serif); font-size: 32px; font-weight: 500; letter-spacing: -0.015em; color: var(--ink);"><span class="en">Supporting research</span><span class="zh">支援研究</span></h2>
 
       <div class="budget">
         <table class="ledger">
-          <tr><td class="cat">Scope &amp; roadmap · v1 · 4-quarter milestone plan</td><td class="num"><a href="https://github.com/dinohsu1011-art/Outdoor-Boys/blob/main/docs/scope-roadmap-v1.md" style="color: var(--mute); font-family: var(--mono); font-size: 11px; letter-spacing: 0.14em;">→ read</a></td></tr>
-          <tr><td class="cat">Regulatory landscape · v1 · entity, licenses, insurance, county access</td><td class="num"><a href="https://github.com/dinohsu1011-art/Outdoor-Boys/blob/main/docs/regulatory-v1.md" style="color: var(--mute); font-family: var(--mono); font-size: 11px; letter-spacing: 0.14em;">→ read</a></td></tr>
-          <tr><td class="cat">Qualifications · v1 · 3-tier cert roadmap with 2026 calendar</td><td class="num"><a href="https://github.com/dinohsu1011-art/Outdoor-Boys/blob/main/docs/qualifications-v1.md" style="color: var(--mute); font-family: var(--mono); font-size: 11px; letter-spacing: 0.14em;">→ read</a></td></tr>
-          <tr><td class="cat">Competitive deep-dive · v1 · Canyons TW · JCI · 4Season · Kiki</td><td class="num"><a href="https://github.com/dinohsu1011-art/Outdoor-Boys/blob/main/docs/competitor-deep-dive-v1.md" style="color: var(--mute); font-family: var(--mono); font-size: 11px; letter-spacing: 0.14em;">→ read</a></td></tr>
-          <tr><td class="cat">Revenue models · v1 · 13+ streams · BnB deep-dive · 3-yr sequencing</td><td class="num"><a href="https://github.com/dinohsu1011-art/Outdoor-Boys/blob/main/docs/revenue-models-v1.md" style="color: var(--mute); font-family: var(--mono); font-size: 11px; letter-spacing: 0.14em;">→ read</a></td></tr>
-          <tr class="total"><td>Feasibility study · v1 · the go / no-go artifact</td><td class="num"><a href="https://github.com/dinohsu1011-art/Outdoor-Boys/blob/main/docs/feasibility-v1.md" style="color: var(--ink); font-family: var(--mono); font-size: 11px; letter-spacing: 0.14em;">→ read</a></td></tr>
+          <tr><td class="cat"><span class="en">Scope &amp; roadmap · v1 · 4-quarter milestone plan</span><span class="zh">範疇與路徑圖 · v1 · 四季里程碑計畫</span></td><td class="num"><a href="https://github.com/dinohsu1011-art/Outdoor-Boys/blob/main/docs/scope-roadmap-v1.md" style="color: var(--mute); font-family: var(--mono); font-size: 11px; letter-spacing: 0.14em;">→ read</a></td></tr>
+          <tr><td class="cat"><span class="en">Regulatory landscape · v1 · entity, licenses, insurance, county access</span><span class="zh">法規全景 · v1 · 公司、證照、保險、縣市進入</span></td><td class="num"><a href="https://github.com/dinohsu1011-art/Outdoor-Boys/blob/main/docs/regulatory-v1.md" style="color: var(--mute); font-family: var(--mono); font-size: 11px; letter-spacing: 0.14em;">→ read</a></td></tr>
+          <tr><td class="cat"><span class="en">Qualifications · v1 · 3-tier cert roadmap with 2026 calendar</span><span class="zh">資格條件 · v1 · 三階證照路徑含 2026 行事曆</span></td><td class="num"><a href="https://github.com/dinohsu1011-art/Outdoor-Boys/blob/main/docs/qualifications-v1.md" style="color: var(--mute); font-family: var(--mono); font-size: 11px; letter-spacing: 0.14em;">→ read</a></td></tr>
+          <tr><td class="cat"><span class="en">Competitive deep-dive · v1 · Canyons TW · JCI · 4Season · Kiki</span><span class="zh">競爭對手深度分析 · v1 · Canyons TW · JCI · 4Season · Kiki</span></td><td class="num"><a href="https://github.com/dinohsu1011-art/Outdoor-Boys/blob/main/docs/competitor-deep-dive-v1.md" style="color: var(--mute); font-family: var(--mono); font-size: 11px; letter-spacing: 0.14em;">→ read</a></td></tr>
+          <tr><td class="cat"><span class="en">Revenue models · v1 · 13+ streams · BnB deep-dive · 3-yr sequencing</span><span class="zh">收入模式 · v1 · 13+ 收入流 · 民宿深度分析 · 三年排序</span></td><td class="num"><a href="https://github.com/dinohsu1011-art/Outdoor-Boys/blob/main/docs/revenue-models-v1.md" style="color: var(--mute); font-family: var(--mono); font-size: 11px; letter-spacing: 0.14em;">→ read</a></td></tr>
+          <tr class="total"><td><span class="en">Feasibility study · v1 · the go / no-go artifact</span><span class="zh">可行性研究 · v1 · 執行 / 不執行判斷依據</span></td><td class="num"><a href="https://github.com/dinohsu1011-art/Outdoor-Boys/blob/main/docs/feasibility-v1.md" style="color: var(--ink); font-family: var(--mono); font-size: 11px; letter-spacing: 0.14em;">→ read</a></td></tr>
         </table>
       </div>
     </section>
@@ -253,8 +254,12 @@
   <footer class="foot">
     <div class="wrap inner">
       <div class="brandmark">Outdoor<em style="color: var(--clay);">·</em>Boys</div>
-      <div class="meta">Business plan v1 · 21 April 2026</div>
-      <div class="meta"><a href="index.html" style="color: var(--mute);">→ Field Log</a> &nbsp;·&nbsp; <a href="regulatory.html" style="color: var(--mute);">→ Regulations</a> &nbsp;·&nbsp; <a href="certs.html" style="color: var(--mute);">→ Licenses</a></div>
+      <div class="meta"><span class="en">Business plan v1 · 21 April 2026</span><span class="zh">商業計畫 v1 · 2026 年 4 月 21 日</span></div>
+      <div class="meta">
+        <a href="index.html" style="color: var(--mute);"><span class="en">→ Field Log</span><span class="zh">→ 儀表板</span></a> &nbsp;·&nbsp;
+        <a href="regulatory.html" style="color: var(--mute);"><span class="en">→ Regulations</span><span class="zh">→ 法規</span></a> &nbsp;·&nbsp;
+        <a href="certs.html" style="color: var(--mute);"><span class="en">→ Licenses</span><span class="zh">→ 證照</span></a>
+      </div>
     </div>
   </footer>
 
