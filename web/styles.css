@@ -511,7 +511,7 @@ nav.top a.link.active { color: var(--ink); border-bottom-color: var(--clay); }
   letter-spacing: -0.01em;
   margin-bottom: 12px;
 }
-.reg-entry h3 .zh { font-family: var(--serif); font-style: italic; font-weight: 300; color: var(--ink-body); font-size: 20px; }
+.reg-entry h3 .en { font-family: var(--serif); font-style: italic; font-weight: 300; color: var(--ink-body); font-size: 20px; }
 .reg-entry .rbody { font-size: 14.5px; line-height: 1.62; color: var(--ink-body); margin-bottom: 14px; max-width: none; }
 .reg-entry .rstat { display: flex; gap: 24px; font-family: var(--mono); font-size: 11px; color: var(--mute); letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 10px; }
 .reg-entry .rstat strong { color: var(--ink); font-weight: 500; }
