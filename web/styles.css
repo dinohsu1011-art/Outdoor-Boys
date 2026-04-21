@@ -17,10 +17,35 @@
   --clay:        #a8471f;   /* rare accent — P0/warnings */
   --moss:        #4a5c1e;   /* rare accent — done */
 
-  --serif: 'Fraunces', 'Playfair Display', Georgia, serif;
-  --sans:  'Inter', system-ui, -apple-system, sans-serif;
-  --mono:  'JetBrains Mono', 'IBM Plex Mono', ui-monospace, monospace;
+  --serif: 'Fraunces', 'Noto Serif TC', 'Playfair Display', Georgia, serif;
+  --sans:  'Inter', 'Noto Sans TC', system-ui, -apple-system, sans-serif;
+  --mono:  'JetBrains Mono', 'IBM Plex Mono', 'Noto Sans TC', ui-monospace, monospace;
 }
+
+/* ---------- i18n: language visibility ---------- */
+html[lang="en"] .zh { display: none !important; }
+html[lang="zh"] .en { display: none !important; }
+
+/* loosen letter-spacing for Chinese display */
+html[lang="zh"] .display,
+html[lang="zh"] h1,
+html[lang="zh"] h2,
+html[lang="zh"] h3 { letter-spacing: 0; }
+
+/* language toggle button */
+.lang-toggle {
+  background: transparent;
+  border: 1px solid var(--rule);
+  padding: 5px 12px;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  color: var(--mute);
+  cursor: pointer;
+  line-height: 1;
+  transition: border-color 180ms ease, color 180ms ease, background 180ms ease;
+}
+.lang-toggle:hover { border-color: var(--ink); color: var(--ink); background: var(--paper-warm); }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -576,7 +601,8 @@ nav.top a.link.active { color: var(--ink); border-bottom-color: var(--clay); }
   line-height: 1.2;
   width: 28%;
 }
-.cert-table td.certname .zh { display: block; font-weight: 300; font-style: italic; font-size: 15px; color: var(--mute); margin-top: 2px; }
+.cert-table td.certname .gloss { display: block; font-weight: 300; font-style: italic; font-size: 15px; color: var(--mute); margin-top: 2px; }
+html[lang="zh"] .cert-table td.certname .gloss { display: none; }
 .cert-table td.num { font-family: var(--mono); font-variant-numeric: tabular-nums; color: var(--ink); white-space: nowrap; }
 .cert-table td.who { font-family: var(--mono); font-size: 11px; letter-spacing: 0.08em; color: var(--clay); text-transform: uppercase; }
 .cert-table td.status .badge {

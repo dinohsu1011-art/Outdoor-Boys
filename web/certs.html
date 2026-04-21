@@ -5,9 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Licenses — Outdoor Boys</title>
   <meta name="description" content="Certifications we need, and how we divide them up based on each founder's strengths." />
+  <script src="i18n.js"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,700;1,9..144,300;1,9..144,400&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,700;1,9..144,300;1,9..144,400&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Noto+Sans+TC:wght@400;500;600&family=Noto+Serif+TC:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -15,101 +16,102 @@
   <nav class="top">
     <a href="index.html" class="brand">Outdoor<em>·</em>Boys</a>
     <ul>
-      <li><a class="link" href="index.html">Field Log</a></li>
-      <li><a class="link" href="regulatory.html">Regulations</a></li>
-      <li><a class="link active" href="certs.html">Licenses</a></li>
+      <li><a class="link" href="index.html"><span class="en">Field Log</span><span class="zh">儀表板</span></a></li>
+      <li><a class="link" href="regulatory.html"><span class="en">Regulations</span><span class="zh">法規</span></a></li>
+      <li><a class="link active" href="certs.html"><span class="en">Licenses</span><span class="zh">證照</span></a></li>
+      <li><button class="lang-toggle" onclick="toggleLang()"><span class="en">中</span><span class="zh">EN</span></button></li>
     </ul>
   </nav>
 
   <main class="wrap">
 
     <section class="hero" style="padding: 48px 0 48px;">
-      <div class="mono sectnum">Licenses &amp; skills · updated 21 Apr 2026</div>
-      <h1 style="font-family: var(--serif); font-size: 36px; font-weight: 500; letter-spacing: -0.015em; color: var(--ink); line-height: 1.1;">Licenses</h1>
+      <div class="mono sectnum"><span class="en">Licenses &amp; skills · updated 21 Apr 2026</span><span class="zh">證照與技能 · 更新於 2026 年 4 月 21 日</span></div>
+      <h1 style="font-family: var(--serif); font-size: 36px; font-weight: 500; letter-spacing: -0.015em; color: var(--ink); line-height: 1.1;"><span class="en">Licenses</span><span class="zh">證照</span></h1>
     </section>
 
     <hr class="rule">
 
     <!-- ========== MASTER CERT TABLE ========== -->
     <section>
-      <div class="sectnum">§ 01 · Master list</div>
-      <h2 style="font-family: var(--serif); font-size: 28px; font-weight: 500; letter-spacing: -0.015em; color: var(--ink);">Master list</h2>
+      <div class="sectnum"><span class="en">§ 01 · Master list</span><span class="zh">§ 01 · 總表</span></div>
+      <h2 style="font-family: var(--serif); font-size: 28px; font-weight: 500; letter-spacing: -0.015em; color: var(--ink);"><span class="en">Master list</span><span class="zh">總表</span></h2>
 
       <table class="cert-table">
         <thead>
           <tr>
-            <th>Certification</th>
-            <th>Authority</th>
-            <th>Cost</th>
-            <th>Hours</th>
-            <th>Owner</th>
-            <th>Status</th>
+            <th><span class="en">Certification</span><span class="zh">證照</span></th>
+            <th><span class="en">Authority</span><span class="zh">發證單位</span></th>
+            <th><span class="en">Cost</span><span class="zh">費用</span></th>
+            <th><span class="en">Hours</span><span class="zh">時數</span></th>
+            <th><span class="en">Owner</span><span class="zh">負責人</span></th>
+            <th><span class="en">Status</span><span class="zh">狀態</span></th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td class="certname">山域嚮導 — 溯溪類<span class="zh">Mountain Guide · Canyoning</span></td>
+            <td class="certname">山域嚮導 — 溯溪類<span class="gloss">Mountain Guide · Canyoning</span></td>
             <td>運動部</td>
             <td class="num">NT$25–45k</td>
             <td class="num">48+</td>
             <td class="who">Dino</td>
-            <td class="status"><span class="badge req">Required · P0</span></td>
+            <td class="status"><span class="badge req"><span class="en">Required · P0</span><span class="zh">必要 · P0</span></span></td>
           </tr>
           <tr>
-            <td class="certname">山域嚮導 — 健行類<span class="zh">Mountain Guide · Hiking</span></td>
+            <td class="certname">山域嚮導 — 健行類<span class="gloss">Mountain Guide · Hiking</span></td>
             <td>運動部</td>
             <td class="num">NT$20–35k</td>
             <td class="num">40+</td>
             <td class="who">Luke</td>
-            <td class="status"><span class="badge req">Required · P0</span></td>
+            <td class="status"><span class="badge req"><span class="en">Required · P0</span><span class="zh">必要 · P0</span></span></td>
           </tr>
           <tr>
-            <td class="certname">紅十字會 水上安全救生員<span class="zh">Red Cross Water Safety Lifeguard</span></td>
+            <td class="certname">紅十字會 水上安全救生員<span class="gloss">Red Cross Water Safety Lifeguard</span></td>
             <td>中華民國紅十字會</td>
             <td class="num">NT$6–10k</td>
             <td class="num">~40</td>
             <td class="who">Apple · Luke</td>
-            <td class="status"><span class="badge rec">Recommended · P1</span></td>
+            <td class="status"><span class="badge rec"><span class="en">Recommended · P1</span><span class="zh">建議 · P1</span></span></td>
           </tr>
           <tr>
-            <td class="certname">Rescue 3 — Swiftwater Rescue Technician<span class="zh">SRT · international</span></td>
+            <td class="certname">Rescue 3 — Swiftwater Rescue Technician<span class="gloss">SRT · international</span></td>
             <td>Rescue 3 International</td>
             <td class="num">USD 700–900</td>
             <td class="num">~24</td>
             <td class="who">Duncan</td>
-            <td class="status"><span class="badge req">Required · P0</span></td>
+            <td class="status"><span class="badge req"><span class="en">Required · P0</span><span class="zh">必要 · P0</span></span></td>
           </tr>
           <tr>
-            <td class="certname">CPR / BLS<span class="zh">Basic Life Support</span></td>
+            <td class="certname">CPR / BLS<span class="gloss">Basic Life Support</span></td>
             <td>Red Cross / AHA</td>
             <td class="num">NT$2–3k</td>
             <td class="num">~8</td>
-            <td class="who">All four</td>
-            <td class="status"><span class="badge req">Required · P0</span></td>
+            <td class="who"><span class="en">All four</span><span class="zh">四人皆須</span></td>
+            <td class="status"><span class="badge req"><span class="en">Required · P0</span><span class="zh">必要 · P0</span></span></td>
           </tr>
           <tr>
-            <td class="certname">Wilderness First Aid<span class="zh">WFA / WFR</span></td>
+            <td class="certname">Wilderness First Aid<span class="gloss">WFA / WFR</span></td>
             <td>NOLS / SOLO / equivalent</td>
             <td class="num">NT$8–15k</td>
             <td class="num">16–80</td>
             <td class="who">Dino · Luke</td>
-            <td class="status"><span class="badge rec">Recommended · P1</span></td>
+            <td class="status"><span class="badge rec"><span class="en">Recommended · P1</span><span class="zh">建議 · P1</span></span></td>
           </tr>
           <tr>
-            <td class="certname">CIC Canyoning Leader<span class="zh">international credibility</span></td>
+            <td class="certname">CIC Canyoning Leader<span class="gloss">international credibility</span></td>
             <td>Commission Internationale de Canyon</td>
             <td class="num">EUR 500+/level</td>
-            <td class="num">varies</td>
-            <td class="who">Dino (Yr 2)</td>
-            <td class="status"><span class="badge opt">Optional · Y2</span></td>
+            <td class="num"><span class="en">varies</span><span class="zh">不一</span></td>
+            <td class="who"><span class="en">Dino (Yr 2)</span><span class="zh">Dino(第 2 年)</span></td>
+            <td class="status"><span class="badge opt"><span class="en">Optional · Y2</span><span class="zh">選配 · 第 2 年</span></span></td>
           </tr>
           <tr>
-            <td class="certname">Mandarin + English safety-briefing script<span class="zh">internal SOP</span></td>
-            <td>In-house</td>
+            <td class="certname"><span class="en">Mandarin + English safety-briefing script</span><span class="zh">中英雙語安全須知腳本</span><span class="gloss">internal SOP</span></td>
+            <td><span class="en">In-house</span><span class="zh">內部</span></td>
             <td class="num">NT$0</td>
             <td class="num">—</td>
             <td class="who">Apple · Duncan</td>
-            <td class="status"><span class="badge rec">Internal</span></td>
+            <td class="status"><span class="badge rec"><span class="en">Internal</span><span class="zh">內部</span></span></td>
           </tr>
         </tbody>
       </table>
@@ -119,67 +121,67 @@
 
     <!-- ========== DIVISION OF LABOR ========== -->
     <section>
-      <div class="sectnum">§ 02 · Assignments</div>
-      <h2 style="font-family: var(--serif); font-size: 28px; font-weight: 500; letter-spacing: -0.015em; color: var(--ink);">Assignments</h2>
+      <div class="sectnum"><span class="en">§ 02 · Assignments</span><span class="zh">§ 02 · 分工</span></div>
+      <h2 style="font-family: var(--serif); font-size: 28px; font-weight: 500; letter-spacing: -0.015em; color: var(--ink);"><span class="en">Assignments</span><span class="zh">分工</span></h2>
 
       <div class="dol">
 
         <div class="dol-cell">
           <div class="header">
             <h3>Dino</h3>
-            <span class="init">DH · Technical lead</span>
+            <span class="init"><span class="en">DH · Technical lead</span><span class="zh">DH · 技術主責</span></span>
           </div>
-          <p class="why">Climbing experience. Comfortable on rappel, anchors, and moving-water route-reading. Cert-holding lead guide.</p>
+          <p class="why"><span class="en">Climbing experience. Comfortable on rappel, anchors, and moving-water route-reading. Cert-holding lead guide.</span><span class="zh">具攀岩經驗,熟悉垂降、確保點設置與流水路線判讀。持證主嚮。</span></p>
           <ul>
-            <li>山域嚮導 — 溯溪類 <em>(lead, P0)</em> <span class="cost">Q1–Q2 · NT$35k</span></li>
-            <li>紅十字會 救生員 <em>(baseline)</em> <span class="cost">Q2 · NT$8k</span></li>
+            <li>山域嚮導 — 溯溪類 <em>(<span class="en">lead, P0</span><span class="zh">主責,P0</span>)</em> <span class="cost">Q1–Q2 · NT$35k</span></li>
+            <li>紅十字會 救生員 <em>(<span class="en">baseline</span><span class="zh">基本</span>)</em> <span class="cost">Q2 · NT$8k</span></li>
             <li>CPR / BLS <span class="cost">Q1 · NT$3k</span></li>
-            <li>Wilderness First Aid <span class="cost">Q3 · NT$10k</span></li>
-            <li>CIC Canyoning Leader <em>(brand credibility)</em> <span class="cost">Year 2</span></li>
+            <li><span class="en">Wilderness First Aid</span><span class="zh">野外急救 WFA</span> <span class="cost">Q3 · NT$10k</span></li>
+            <li>CIC Canyoning Leader <em>(<span class="en">brand credibility</span><span class="zh">品牌公信力</span>)</em> <span class="cost"><span class="en">Year 2</span><span class="zh">第 2 年</span></span></li>
           </ul>
         </div>
 
         <div class="dol-cell">
           <div class="header">
             <h3>Luke</h3>
-            <span class="init">LU · Ops &amp; land</span>
+            <span class="init"><span class="en">LU · Ops &amp; land</span><span class="zh">LU · 運營與土地</span></span>
           </div>
-          <p class="why">Avid hiker. Established contacts at county offices and local Nanao vendors. Hiking variant of 山域嚮導 plus on-the-ground ops lead.</p>
+          <p class="why"><span class="en">Avid hiker. Established contacts at county offices and local Nanao vendors. Hiking variant of 山域嚮導 plus on-the-ground ops lead.</span><span class="zh">資深登山者,於縣府單位與南澳在地店家已有人脈。山域嚮導 健行類 + 現場運營主責。</span></p>
           <ul>
             <li>山域嚮導 — 健行類 <em>(P0)</em> <span class="cost">Q1–Q2 · NT$28k</span></li>
             <li>紅十字會 救生員 <span class="cost">Q2 · NT$8k</span></li>
             <li>CPR / BLS <span class="cost">Q1 · NT$3k</span></li>
-            <li>Wilderness First Aid <span class="cost">Q3 · NT$10k</span></li>
-            <li>Relationship "certs" — Nanao township, Yilan 觀光處, Forestry Agency <span class="cost">Q1 ongoing</span></li>
+            <li><span class="en">Wilderness First Aid</span><span class="zh">野外急救 WFA</span> <span class="cost">Q3 · NT$10k</span></li>
+            <li><span class="en">Relationship "certs" — Nanao township, Yilan 觀光處, Forestry Agency</span><span class="zh">關係「證照」 — 南澳鄉公所、宜蘭 觀光處、林業署</span> <span class="cost"><span class="en">Q1 ongoing</span><span class="zh">Q1 持續</span></span></li>
           </ul>
         </div>
 
         <div class="dol-cell">
           <div class="header">
             <h3>Duncan</h3>
-            <span class="init">DC · Water safety</span>
+            <span class="init"><span class="en">DC · Water safety</span><span class="zh">DC · 水上安全</span></span>
           </div>
-          <p class="why">Strongest swimmer, all-around athlete. US-based, so the cheapest path to elite water credentials. Owns on-trip water safety; qualifies as 安全人員 via foreign cert while pursuing TW cert in Year 2.</p>
+          <p class="why"><span class="en">Strongest swimmer, all-around athlete. US-based, so the cheapest path to elite water credentials. Owns on-trip water safety; qualifies as 安全人員 via foreign cert while pursuing TW cert in Year 2.</span><span class="zh">全隊最強泳者,全能運動員。現居美國,是取得國際水上證照最低成本的路徑。出團時負責水上安全;以國外證照擔任 安全人員,並於第 2 年取得台灣證照。</span></p>
           <ul>
-            <li>Rescue 3 SRT <em>(P0, US-based)</em> <span class="cost">Q1–Q2 · USD 900</span></li>
-            <li>US Red Cross Lifeguard <em>(TW equivalence)</em> <span class="cost">Q1 · USD 250</span></li>
+            <li>Rescue 3 SRT <em>(<span class="en">P0, US-based</span><span class="zh">P0,於美國</span>)</em> <span class="cost">Q1–Q2 · USD 900</span></li>
+            <li>US Red Cross Lifeguard <em>(<span class="en">TW equivalence</span><span class="zh">台灣等效</span>)</em> <span class="cost">Q1 · USD 250</span></li>
             <li>CPR / BLS <em>(AHA)</em> <span class="cost">Q1 · USD 75</span></li>
-            <li>山域嚮導 — 溯溪類 <em>(after relocation)</em> <span class="cost">Year 2 · NT$35k</span></li>
+            <li>山域嚮導 — 溯溪類 <em>(<span class="en">after relocation</span><span class="zh">搬回台灣後</span>)</em> <span class="cost"><span class="en">Year 2 · NT$35k</span><span class="zh">第 2 年 · NT$35k</span></span></li>
           </ul>
         </div>
 
         <div class="dol-cell">
           <div class="header">
             <h3>Apple</h3>
-            <span class="init">AP · Sales + hospitality</span>
+            <span class="init"><span class="en">AP · Sales + hospitality</span><span class="zh">AP · 銷售 + 接待</span></span>
           </div>
-          <p class="why">Strongest sales / social skills in the group. Japanese-speaking. Owns the customer from inquiry to review. Safety-qualified enough to assist on-trip; not pursuing lead-guide cert — his edge is opening the Japanese channel nobody else is serving.</p>
+          <p class="why"><span class="en">Strongest sales / social skills in the group. Japanese-speaking. Owns the customer from inquiry to review. Safety-qualified enough to assist on-trip; not pursuing lead-guide cert — his edge is opening the Japanese channel nobody else is serving.</span><span class="zh">全隊最強的銷售與社交力,通曉日文。主責客戶從詢問到評價全流程。具備足以協助出團的安全資格;不追求主嚮證照 — 他的優勢在於打開目前無人服務的日本市場通路。</span></p>
           <ul>
-            <li>紅十字會 救生員 <em>(P0 baseline)</em> <span class="cost">Q1–Q2 · NT$8k</span></li>
+            <li>紅十字會 救生員 <em>(<span class="en">P0 baseline</span><span class="zh">P0 基本</span>)</em> <span class="cost">Q1–Q2 · NT$8k</span></li>
             <li>CPR / BLS <span class="cost">Q1 · NT$3k</span></li>
-            <li>Japanese sales ops — VELTRA + Locotabi applications <span class="cost">Q3–Q4</span></li>
-            <li>Customer-service SOP authorship <span class="cost">Q2</span></li>
-            <li>Optional: 救生員 Jr. instructor track <span class="cost">Year 2</span></li>
+            <li><span class="en">Japanese sales ops — VELTRA + Locotabi applications</span><span class="zh">日本銷售通路 — VELTRA + Locotabi 申請</span> <span class="cost">Q3–Q4</span></li>
+            <li><span class="en">Customer-service SOP authorship</span><span class="zh">客服 SOP 撰寫</span> <span class="cost">Q2</span></li>
+            <li><span class="en">Optional: 救生員 Jr. instructor track</span><span class="zh">選配:救生員 初階教練路徑</span> <span class="cost"><span class="en">Year 2</span><span class="zh">第 2 年</span></span></li>
           </ul>
         </div>
 
@@ -190,49 +192,49 @@
 
     <!-- ========== COMPOSITION ON ANY GIVEN TRIP ========== -->
     <section>
-      <div class="sectnum">§ 03 · Trip composition</div>
-      <h2 style="font-family: var(--serif); font-size: 28px; font-weight: 500; letter-spacing: -0.015em; color: var(--ink);">Trip composition</h2>
+      <div class="sectnum"><span class="en">§ 03 · Trip composition</span><span class="zh">§ 03 · 出團編制</span></div>
+      <h2 style="font-family: var(--serif); font-size: 28px; font-weight: 500; letter-spacing: -0.015em; color: var(--ink);"><span class="en">Trip composition</span><span class="zh">出團編制</span></h2>
 
       <div style="margin-top: 56px; display: grid; grid-template-columns: 1fr 1fr; gap: 0; border-top: 2px solid var(--ink);">
 
         <div style="padding: 36px 36px 36px 0; border-bottom: 1px solid var(--rule);">
-          <div class="kicker" style="margin-bottom: 12px;">Minimum viable trip · ≤5 guests</div>
-          <h3 style="font-size: 30px; font-weight: 500; letter-spacing: -0.015em; line-height: 1.1; margin-bottom: 18px;">1 lead guide · 1 support</h3>
+          <div class="kicker" style="margin-bottom: 12px;"><span class="en">Minimum viable trip · ≤5 guests</span><span class="zh">最小可行團 · ≤5 位客人</span></div>
+          <h3 style="font-size: 30px; font-weight: 500; letter-spacing: -0.015em; line-height: 1.1; margin-bottom: 18px;"><span class="en">1 lead guide · 1 support</span><span class="zh">1 主嚮 · 1 支援</span></h3>
           <ul style="list-style: none;">
-            <li style="padding: 10px 0; border-top: 1px solid var(--rule-fine); font-size: 15px; line-height: 1.5;"><strong style="font-family: var(--mono); font-size: 11px; color: var(--clay); letter-spacing: 0.1em; margin-right: 10px;">DH</strong>Lead guide — 溯溪嚮導, technical rope, route-owner</li>
-            <li style="padding: 10px 0; border-top: 1px solid var(--rule-fine); font-size: 15px; line-height: 1.5;"><strong style="font-family: var(--mono); font-size: 11px; color: var(--clay); letter-spacing: 0.1em; margin-right: 10px;">AP</strong>Support — customer relations, hospitality, sweep</li>
+            <li style="padding: 10px 0; border-top: 1px solid var(--rule-fine); font-size: 15px; line-height: 1.5;"><strong style="font-family: var(--mono); font-size: 11px; color: var(--clay); letter-spacing: 0.1em; margin-right: 10px;">DH</strong><span class="en">Lead guide — 溯溪嚮導, technical rope, route-owner</span><span class="zh">主嚮 — 溯溪嚮導、技術繩索、路線負責</span></li>
+            <li style="padding: 10px 0; border-top: 1px solid var(--rule-fine); font-size: 15px; line-height: 1.5;"><strong style="font-family: var(--mono); font-size: 11px; color: var(--clay); letter-spacing: 0.1em; margin-right: 10px;">AP</strong><span class="en">Support — customer relations, hospitality, sweep</span><span class="zh">支援 — 客戶關係、接待、押隊</span></li>
           </ul>
-          <p style="margin-top: 18px; font-size: 14px; line-height: 1.55; color: var(--ink-body);">Satisfies 1:5 ratio with one qualified lead. Lowest-cost configuration for Q3 trial trips.</p>
+          <p style="margin-top: 18px; font-size: 14px; line-height: 1.55; color: var(--ink-body);"><span class="en">Satisfies 1:5 ratio with one qualified lead. Lowest-cost configuration for Q3 trial trips.</span><span class="zh">以單一合格主嚮符合 1:5 比。Q3 試行團最低成本編制。</span></p>
         </div>
 
         <div style="padding: 36px 0 36px 36px; border-bottom: 1px solid var(--rule); border-left: 1px solid var(--rule);">
-          <div class="kicker" style="margin-bottom: 12px;">Standard trip · 6–8 guests</div>
-          <h3 style="font-size: 30px; font-weight: 500; letter-spacing: -0.015em; line-height: 1.1; margin-bottom: 18px;">2 lead · 1 safety</h3>
+          <div class="kicker" style="margin-bottom: 12px;"><span class="en">Standard trip · 6–8 guests</span><span class="zh">標準團 · 6–8 位客人</span></div>
+          <h3 style="font-size: 30px; font-weight: 500; letter-spacing: -0.015em; line-height: 1.1; margin-bottom: 18px;"><span class="en">2 lead · 1 safety</span><span class="zh">2 主嚮 · 1 安全</span></h3>
           <ul style="list-style: none;">
-            <li style="padding: 10px 0; border-top: 1px solid var(--rule-fine); font-size: 15px; line-height: 1.5;"><strong style="font-family: var(--mono); font-size: 11px; color: var(--clay); letter-spacing: 0.1em; margin-right: 10px;">DH</strong>Lead 溯溪 guide</li>
-            <li style="padding: 10px 0; border-top: 1px solid var(--rule-fine); font-size: 15px; line-height: 1.5;"><strong style="font-family: var(--mono); font-size: 11px; color: var(--clay); letter-spacing: 0.1em; margin-right: 10px;">LU</strong>Co-guide (山域嚮導 健行) + ops/shuttle</li>
-            <li style="padding: 10px 0; border-top: 1px solid var(--rule-fine); font-size: 15px; line-height: 1.5;"><strong style="font-family: var(--mono); font-size: 11px; color: var(--clay); letter-spacing: 0.1em; margin-right: 10px;">DC</strong>Water-safety officer (when in TW) — SRT-qualified 安全人員</li>
-            <li style="padding: 10px 0; border-top: 1px solid var(--rule-fine); font-size: 15px; line-height: 1.5;"><strong style="font-family: var(--mono); font-size: 11px; color: var(--clay); letter-spacing: 0.1em; margin-right: 10px;">AP</strong>On call for customer issues / Japanese clients</li>
+            <li style="padding: 10px 0; border-top: 1px solid var(--rule-fine); font-size: 15px; line-height: 1.5;"><strong style="font-family: var(--mono); font-size: 11px; color: var(--clay); letter-spacing: 0.1em; margin-right: 10px;">DH</strong><span class="en">Lead 溯溪 guide</span><span class="zh">溯溪 主嚮</span></li>
+            <li style="padding: 10px 0; border-top: 1px solid var(--rule-fine); font-size: 15px; line-height: 1.5;"><strong style="font-family: var(--mono); font-size: 11px; color: var(--clay); letter-spacing: 0.1em; margin-right: 10px;">LU</strong><span class="en">Co-guide (山域嚮導 健行) + ops/shuttle</span><span class="zh">副嚮(山域嚮導 健行)+ 運營 / 接駁</span></li>
+            <li style="padding: 10px 0; border-top: 1px solid var(--rule-fine); font-size: 15px; line-height: 1.5;"><strong style="font-family: var(--mono); font-size: 11px; color: var(--clay); letter-spacing: 0.1em; margin-right: 10px;">DC</strong><span class="en">Water-safety officer (when in TW) — SRT-qualified 安全人員</span><span class="zh">水上安全官(在台期間)— 具 SRT 資格之 安全人員</span></li>
+            <li style="padding: 10px 0; border-top: 1px solid var(--rule-fine); font-size: 15px; line-height: 1.5;"><strong style="font-family: var(--mono); font-size: 11px; color: var(--clay); letter-spacing: 0.1em; margin-right: 10px;">AP</strong><span class="en">On call for customer issues / Japanese clients</span><span class="zh">待命處理客戶問題 / 日籍客人</span></li>
           </ul>
         </div>
 
         <div style="padding: 36px 36px 36px 0;">
-          <div class="kicker" style="margin-bottom: 12px;">Premium / Japanese · up to 4 guests</div>
-          <h3 style="font-size: 30px; font-weight: 500; letter-spacing: -0.015em; line-height: 1.1; margin-bottom: 18px;">Small-group flagship</h3>
+          <div class="kicker" style="margin-bottom: 12px;"><span class="en">Premium / Japanese · up to 4 guests</span><span class="zh">高端 / 日本團 · 上限 4 人</span></div>
+          <h3 style="font-size: 30px; font-weight: 500; letter-spacing: -0.015em; line-height: 1.1; margin-bottom: 18px;"><span class="en">Small-group flagship</span><span class="zh">小團旗艦</span></h3>
           <ul style="list-style: none;">
-            <li style="padding: 10px 0; border-top: 1px solid var(--rule-fine); font-size: 15px; line-height: 1.5;"><strong style="font-family: var(--mono); font-size: 11px; color: var(--clay); letter-spacing: 0.1em; margin-right: 10px;">DH</strong>Lead 溯溪 — English narration</li>
-            <li style="padding: 10px 0; border-top: 1px solid var(--rule-fine); font-size: 15px; line-height: 1.5;"><strong style="font-family: var(--mono); font-size: 11px; color: var(--clay); letter-spacing: 0.1em; margin-right: 10px;">AP</strong>Japanese lead / hospitality — on trips with JP guests</li>
+            <li style="padding: 10px 0; border-top: 1px solid var(--rule-fine); font-size: 15px; line-height: 1.5;"><strong style="font-family: var(--mono); font-size: 11px; color: var(--clay); letter-spacing: 0.1em; margin-right: 10px;">DH</strong><span class="en">Lead 溯溪 — English narration</span><span class="zh">溯溪 主嚮 — 英文解說</span></li>
+            <li style="padding: 10px 0; border-top: 1px solid var(--rule-fine); font-size: 15px; line-height: 1.5;"><strong style="font-family: var(--mono); font-size: 11px; color: var(--clay); letter-spacing: 0.1em; margin-right: 10px;">AP</strong><span class="en">Japanese lead / hospitality — on trips with JP guests</span><span class="zh">日文主要負責 / 接待 — 有日籍客人時</span></li>
           </ul>
-          <p style="margin-top: 18px; font-size: 14px; line-height: 1.55; color: var(--ink-body);">Max 4 guests, instant-book, Taipei pickup. This is the wedge product — bilingual, premium, zero direct competitor overlap.</p>
+          <p style="margin-top: 18px; font-size: 14px; line-height: 1.55; color: var(--ink-body);"><span class="en">Max 4 guests, instant-book, Taipei pickup. This is the wedge product — bilingual, premium, zero direct competitor overlap.</span><span class="zh">上限 4 人、即時訂購、台北接送。這是切入市場的楔子產品 — 雙語、高端,目前無直接競爭。</span></p>
         </div>
 
         <div style="padding: 36px 0 36px 36px; border-left: 1px solid var(--rule);">
-          <div class="kicker" style="margin-bottom: 12px;">High-tempo season · parallel trips</div>
-          <h3 style="font-size: 30px; font-weight: 500; letter-spacing: -0.015em; line-height: 1.1; margin-bottom: 18px;">Two groups, one day</h3>
+          <div class="kicker" style="margin-bottom: 12px;"><span class="en">High-tempo season · parallel trips</span><span class="zh">旺季 · 平行出團</span></div>
+          <h3 style="font-size: 30px; font-weight: 500; letter-spacing: -0.015em; line-height: 1.1; margin-bottom: 18px;"><span class="en">Two groups, one day</span><span class="zh">同日兩團</span></h3>
           <ul style="list-style: none;">
-            <li style="padding: 10px 0; border-top: 1px solid var(--rule-fine); font-size: 15px; line-height: 1.5;">Year-2 capacity — requires a 2nd 溯溪-certified guide</li>
-            <li style="padding: 10px 0; border-top: 1px solid var(--rule-fine); font-size: 15px; line-height: 1.5;">Candidate: Duncan after relocation, or hire a contractor 嚮導</li>
-            <li style="padding: 10px 0; border-top: 1px solid var(--rule-fine); font-size: 15px; line-height: 1.5;">Budget implication: +NT$35k cert or ~NT$4–6k / trip to contract</li>
+            <li style="padding: 10px 0; border-top: 1px solid var(--rule-fine); font-size: 15px; line-height: 1.5;"><span class="en">Year-2 capacity — requires a 2nd 溯溪-certified guide</span><span class="zh">第 2 年產能 — 需第二位 溯溪 持證嚮導</span></li>
+            <li style="padding: 10px 0; border-top: 1px solid var(--rule-fine); font-size: 15px; line-height: 1.5;"><span class="en">Candidate: Duncan after relocation, or hire a contractor 嚮導</span><span class="zh">人選:Duncan 回台後,或外聘 嚮導</span></li>
+            <li style="padding: 10px 0; border-top: 1px solid var(--rule-fine); font-size: 15px; line-height: 1.5;"><span class="en">Budget implication: +NT$35k cert or ~NT$4–6k / trip to contract</span><span class="zh">預算影響:自訓 +NT$35k 證照費,或外聘每團約 NT$4–6k</span></li>
           </ul>
         </div>
 
@@ -243,39 +245,39 @@
 
     <!-- ========== TOTAL CERT BUDGET ========== -->
     <section class="tight">
-      <div class="sectnum">§ 04 · Year-1 cert budget</div>
-      <h2 style="font-family: var(--serif); font-size: 28px; font-weight: 500; letter-spacing: -0.015em; color: var(--ink);">Year-1 cert budget</h2>
+      <div class="sectnum"><span class="en">§ 04 · Year-1 cert budget</span><span class="zh">§ 04 · 第一年證照預算</span></div>
+      <h2 style="font-family: var(--serif); font-size: 28px; font-weight: 500; letter-spacing: -0.015em; color: var(--ink);"><span class="en">Year-1 cert budget</span><span class="zh">第一年證照預算</span></h2>
 
       <table class="ledger" style="margin-top: 48px; width: 100%; border-collapse: collapse;">
         <tr style="border-top: 2px solid var(--ink);">
-          <td style="padding: 14px 0;">Dino — 溯溪類 + 救生員 + CPR + WFA</td>
+          <td style="padding: 14px 0;"><span class="en">Dino — 溯溪類 + 救生員 + CPR + WFA</span><span class="zh">Dino — 溯溪類 + 救生員 + CPR + WFA</span></td>
           <td style="text-align: right; font-family: var(--mono); padding: 14px 0; color: var(--ink);">NT$ 56,000</td>
         </tr>
         <tr style="border-top: 1px solid var(--rule-fine);">
-          <td style="padding: 14px 0;">Luke — 健行類 + 救生員 + CPR + WFA</td>
+          <td style="padding: 14px 0;"><span class="en">Luke — 健行類 + 救生員 + CPR + WFA</span><span class="zh">Luke — 健行類 + 救生員 + CPR + WFA</span></td>
           <td style="text-align: right; font-family: var(--mono); padding: 14px 0; color: var(--ink);">NT$ 49,000</td>
         </tr>
         <tr style="border-top: 1px solid var(--rule-fine);">
-          <td style="padding: 14px 0;">Duncan — SRT + US Lifeguard + BLS (USD ~1,225)</td>
+          <td style="padding: 14px 0;"><span class="en">Duncan — SRT + US Lifeguard + BLS (USD ~1,225)</span><span class="zh">Duncan — SRT + 美國救生員 + BLS(約 USD 1,225)</span></td>
           <td style="text-align: right; font-family: var(--mono); padding: 14px 0; color: var(--ink);">NT$ 39,000</td>
         </tr>
         <tr style="border-top: 1px solid var(--rule-fine);">
-          <td style="padding: 14px 0;">Apple — 救生員 + CPR</td>
+          <td style="padding: 14px 0;"><span class="en">Apple — 救生員 + CPR</span><span class="zh">Apple — 救生員 + CPR</span></td>
           <td style="text-align: right; font-family: var(--mono); padding: 14px 0; color: var(--ink);">NT$ 11,000</td>
         </tr>
         <tr style="border-top: 2px solid var(--ink); font-family: var(--serif); font-weight: 500;">
-          <td style="padding: 14px 0;">Total — full roster</td>
+          <td style="padding: 14px 0;"><span class="en">Total — full roster</span><span class="zh">合計 — 完整編組</span></td>
           <td style="text-align: right; font-family: var(--mono); padding: 14px 0; color: var(--ink); font-weight: 500;">NT$ 155,000</td>
         </tr>
         <tr style="border-top: 1px solid var(--rule-fine);">
-          <td style="padding: 14px 0; color: var(--clay);">Minimum viable — defer WFA + Duncan's US certs to Y2</td>
+          <td style="padding: 14px 0; color: var(--clay);"><span class="en">Minimum viable — defer WFA + Duncan's US certs to Y2</span><span class="zh">最小可行 — 將 WFA 與 Duncan 的美國證照延至第 2 年</span></td>
           <td style="text-align: right; font-family: var(--mono); padding: 14px 0; color: var(--clay);">NT$ 80,000</td>
         </tr>
       </table>
 
       <div style="margin-top: 48px; padding: 24px 28px; background: var(--paper-warm); border-left: 3px solid var(--clay); max-width: 62ch;">
-        <div class="mono" style="color: var(--clay); margin-bottom: 8px;">Budget reconciliation</div>
-        <p style="font-size: 15px; line-height: 1.6; color: var(--ink-body);">Full cert roster (NT$155k) exceeds the NT$40k cert line in the main budget by NT$115k. Two levers: <strong style="color: var(--ink);">defer WFA + Duncan's US certs to year 2</strong> (brings Y1 cert spend to NT$80k), or <strong style="color: var(--ink);">founders each pay their own Y1 certs personally</strong> as equity-equivalent contribution. Decide at first weekly sync — the answer may vary by founder.</p>
+        <div class="mono" style="color: var(--clay); margin-bottom: 8px;"><span class="en">Budget reconciliation</span><span class="zh">預算對賬</span></div>
+        <p style="font-size: 15px; line-height: 1.6; color: var(--ink-body);"><span class="en">Full cert roster (NT$155k) exceeds the NT$40k cert line in the main budget by NT$115k. Two levers: <strong style="color: var(--ink);">defer WFA + Duncan's US certs to year 2</strong> (brings Y1 cert spend to NT$80k), or <strong style="color: var(--ink);">founders each pay their own Y1 certs personally</strong> as equity-equivalent contribution. Decide at first weekly sync — the answer may vary by founder.</span><span class="zh">完整證照組合(NT$155k)較主預算 NT$40k 之證照項多 NT$115k。兩個槓桿:<strong style="color: var(--ink);">將 WFA 與 Duncan 的美國證照延至第 2 年</strong>(第 1 年證照支出降至 NT$80k),或 <strong style="color: var(--ink);">創辦人各自自費支付第 1 年證照</strong>,視為等同股權之出資。首次週會再定案 — 各人答案可能不同。</span></p>
       </div>
     </section>
 
@@ -284,8 +286,8 @@
   <footer class="foot">
     <div class="wrap inner">
       <div class="brandmark">Outdoor<em style="color: var(--clay);">·</em>Boys</div>
-      <div class="meta">Licenses · v1 · 21 Apr 2026</div>
-      <div class="meta"><a href="index.html" style="color: var(--mute);">← Field Log</a> &nbsp;·&nbsp; <a href="regulatory.html" style="color: var(--mute);">← Regulations</a></div>
+      <div class="meta"><span class="en">Licenses · v1 · 21 Apr 2026</span><span class="zh">證照 · v1 · 2026 年 4 月 21 日</span></div>
+      <div class="meta"><a href="index.html" style="color: var(--mute);"><span class="en">← Field Log</span><span class="zh">← 儀表板</span></a> &nbsp;·&nbsp; <a href="regulatory.html" style="color: var(--mute);"><span class="en">← Regulations</span><span class="zh">← 法規</span></a></div>
     </div>
   </footer>
 
