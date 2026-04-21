@@ -17,9 +17,9 @@
   --clay:        #a8471f;   /* rare accent — P0/warnings */
   --moss:        #4a5c1e;   /* rare accent — done */
 
-  --serif: 'Fraunces', 'Noto Serif TC', 'Playfair Display', Georgia, serif;
-  --sans:  'Inter', 'Noto Sans TC', system-ui, -apple-system, sans-serif;
-  --mono:  'JetBrains Mono', 'IBM Plex Mono', 'Noto Sans TC', ui-monospace, monospace;
+  --serif: 'Instrument Serif', 'Noto Serif TC', 'Source Serif 4', Georgia, serif;
+  --sans:  'Geist', 'Noto Sans TC', 'Inter', system-ui, -apple-system, sans-serif;
+  --mono:  'Geist Mono', 'JetBrains Mono', 'Noto Sans TC', ui-monospace, monospace;
 }
 
 /* ---------- i18n: language visibility ---------- */
