@@ -7,6 +7,33 @@
   <meta name="description" content="Certifications we need, and how we divide them up based on each founder's strengths." />
   <script src="i18n.js?v=3"></script>
   <link rel="stylesheet" href="styles.css?v=5">
+  <style>
+    .cert-table th, .cert-table td { font-size: 13px; }
+    .cert-table .sched { font-size: 12px; color: var(--ink-body); line-height: 1.4; }
+    .cert-table .renew { font-size: 12px; color: var(--mute); white-space: nowrap; }
+    .cert-table a { color: var(--ink); text-decoration: underline; text-underline-offset: 3px; }
+    .cert-table a:hover { color: var(--clay); }
+    tr.group-head td {
+      background: var(--paper-warm, #f9f6f1);
+      font-family: var(--mono);
+      font-size: 10px;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+      color: var(--mute);
+      padding: 8px 8px 5px;
+      border-top: 2px solid var(--rule);
+    }
+    .badge.prog { background: #ebebeb; color: #888; margin-top: 4px; display: inline-block; }
+    .badge.warn { background: #fff3cd; color: #856404; margin-top: 4px; display: inline-block; }
+    .prereq-box {
+      margin-top: 28px;
+      padding: 20px 24px;
+      background: #fff8e6;
+      border-left: 3px solid #e6a817;
+      max-width: 72ch;
+    }
+    .prereq-box .tag { font-family: var(--mono); font-size: 10px; letter-spacing: 0.13em; text-transform: uppercase; color: #a07000; margin-bottom: 8px; }
+  </style>
 </head>
 <body>
 
@@ -40,80 +67,115 @@
         <thead>
           <tr>
             <th><span class="en">Certification</span><span class="zh">證照</span></th>
-            <th><span class="en">Authority</span><span class="zh">發證單位</span></th>
-            <th><span class="en">Cost</span><span class="zh">費用</span></th>
-            <th><span class="en">Hours</span><span class="zh">時數</span></th>
+            <th><span class="en">Issuer / Provider</span><span class="zh">發證 / 培訓單位</span></th>
+            <th><span class="en">Cost (NTD)</span><span class="zh">費用</span></th>
+            <th><span class="en">2026 Schedule</span><span class="zh">2026 梯次</span></th>
+            <th><span class="en">Valid · Renewal</span><span class="zh">有效期 · 換證</span></th>
             <th><span class="en">Owner</span><span class="zh">負責人</span></th>
-            <th><span class="en">Status</span><span class="zh">狀態</span></th>
+            <th><span class="en">Priority · Progress</span><span class="zh">優先 · 進度</span></th>
           </tr>
         </thead>
         <tbody>
+
+          <tr class="group-head"><td colspan="7"><span class="en">Foundation — all four founders must hold these</span><span class="zh">基礎 — 四位創辦人皆須持有</span></td></tr>
+
           <tr>
-            <td class="certname">山域嚮導 — 溯溪類<span class="gloss">Mountain Guide · Canyoning</span></td>
-            <td>運動部</td>
-            <td class="num">NT$25–45k</td>
-            <td class="num">48+</td>
-            <td class="who">Dino</td>
-            <td class="status"><span class="badge req"><span class="en">Required · P0</span><span class="zh">必要 · P0</span></span></td>
-          </tr>
-          <tr>
-            <td class="certname">山域嚮導 — 健行類<span class="gloss">Mountain Guide · Hiking</span></td>
-            <td>運動部</td>
-            <td class="num">NT$20–35k</td>
-            <td class="num">40+</td>
-            <td class="who">Luke</td>
-            <td class="status"><span class="badge req"><span class="en">Required · P0</span><span class="zh">必要 · P0</span></span></td>
-          </tr>
-          <tr>
-            <td class="certname">紅十字會 水上安全救生員<span class="gloss">Red Cross Water Safety Lifeguard</span></td>
-            <td>中華民國紅十字會</td>
-            <td class="num">NT$6–10k</td>
-            <td class="num">~40</td>
-            <td class="who">Apple · Luke</td>
-            <td class="status"><span class="badge rec"><span class="en">Recommended · P1</span><span class="zh">建議 · P1</span></span></td>
-          </tr>
-          <tr>
-            <td class="certname"><span class="en">Rescue 3 — Swiftwater Rescue Technician</span><span class="zh">Rescue 3 — 急流救援技術員</span><span class="gloss">SRT · international</span></td>
-            <td>Rescue 3 International</td>
-            <td class="num">USD 700–900</td>
-            <td class="num">~24</td>
-            <td class="who">Duncan</td>
-            <td class="status"><span class="badge req"><span class="en">Required · P0</span><span class="zh">必要 · P0</span></span></td>
-          </tr>
-          <tr>
-            <td class="certname">CPR / BLS<span class="gloss"><span class="en">Basic Life Support</span><span class="zh">基本生命支持</span></span></td>
-            <td><span class="en">Red Cross / AHA</span><span class="zh">紅十字會 / AHA</span></td>
-            <td class="num">NT$2–3k</td>
-            <td class="num">~8</td>
+            <td class="certname">CPR / BLS<span class="gloss"><span class="en">Basic Life Support · ~8 hrs</span><span class="zh">基本生命支持 · 約 8 小時</span></span></td>
+            <td><a href="https://www.redcross-class.org.tw/ClassInfo" target="_blank" rel="noopener">中華民國紅十字會</a><br><span class="gloss"><span class="en">or</span><span class="zh">或</span> <a href="https://atlas.heart.org/zhtw/" target="_blank" rel="noopener">AHA Taiwan</a></span></td>
+            <td class="num">NT$600<br><span class="gloss">(AHA: ~NT$2,500)</span></td>
+            <td class="sched"><span class="en">Rolling · Red Cross Apr 22+ confirmed</span><span class="zh">常態開班 · 紅十字 4/22 起有梯次</span></td>
+            <td class="renew"><span class="en">2 yr · re-take</span><span class="zh">2 年 · 重考</span></td>
             <td class="who"><span class="en">All four</span><span class="zh">四人皆須</span></td>
-            <td class="status"><span class="badge req"><span class="en">Required · P0</span><span class="zh">必要 · P0</span></span></td>
+            <td class="status"><span class="badge req">P0</span><br><span class="badge prog"><span class="en">Not started</span><span class="zh">未開始</span></span></td>
           </tr>
+
           <tr>
-            <td class="certname"><span class="en">Wilderness First Aid</span><span class="zh">野外急救</span><span class="gloss">WFA / WFR</span></td>
-            <td><span class="en">NOLS / SOLO / equivalent</span><span class="zh">NOLS / SOLO / 同等機構</span></td>
-            <td class="num">NT$8–15k</td>
-            <td class="num">16–80</td>
+            <td class="certname"><span class="en">Wilderness First Aid</span><span class="zh">野外急救</span><span class="gloss">WFA · NOLS · 16 hrs</span></td>
+            <td><a href="https://www.crossinglatitudes.com/nols-courses" target="_blank" rel="noopener">NOLS / Crossing Latitudes</a><br><span class="gloss"><span class="en">Taiwan provider</span><span class="zh">台灣承辦</span></span></td>
+            <td class="num">~NT$11,200<br><span class="gloss">(2025 TW rate)</span></td>
+            <td class="sched"><span class="en">No 2026 Taiwan date yet — monitor. Min 15 pax to open a session. US options available.</span><span class="zh">2026 台灣梯次未定 — 持續追蹤。需 15 人以上才開班。可赴美上課。</span></td>
+            <td class="renew"><span class="en">2 yr · re-take</span><span class="zh">2 年 · 重考</span></td>
+            <td class="who"><span class="en">All four</span><span class="zh">四人皆須</span></td>
+            <td class="status"><span class="badge rec">P1</span><br><span class="badge prog"><span class="en">Not started</span><span class="zh">未開始</span></span></td>
+          </tr>
+
+          <tr class="group-head"><td colspan="7"><span class="en">Lead guide — Taiwan government certification (sequential: 健行類 first, then 溯溪類)</span><span class="zh">主嚮 — 政府核發證照（須依序:先健行類,再溯溪類）</span></td></tr>
+
+          <tr>
+            <td class="certname">山域嚮導 — 健行類<span class="gloss">Mountain Guide · Hiking · 40+ hrs</span></td>
+            <td><a href="https://isports.sa.gov.tw/apps/MTG/index.aspx" target="_blank" rel="noopener">教育部運動部 iSports</a><br><span class="gloss"><span class="en">Training via</span><span class="zh">培訓:</span> <a href="https://www.adventuretaiwan.com/mountain-guide-program/" target="_blank" rel="noopener">Adventure TW</a></span></td>
+            <td class="num">NT$26,000<br><span class="gloss">(train NT$22k + exam NT$4k)</span></td>
+            <td class="sched"><span class="en">Train: Jun 13–21 · Sep 19–27<br>Exam: Jul 3–5 · Oct 16–18</span><span class="zh">培訓: 6/13–21 · 9/19–27<br>考試: 7/3–5 · 10/16–18</span></td>
+            <td class="renew"><span class="en">3 yr · 24 hr re-train</span><span class="zh">3 年 · 複訓 24 小時</span></td>
             <td class="who">Dino · Luke</td>
-            <td class="status"><span class="badge rec"><span class="en">Recommended · P1</span><span class="zh">建議 · P1</span></span></td>
+            <td class="status"><span class="badge req">P0</span><br><span class="badge prog"><span class="en">Not started</span><span class="zh">未開始</span></span></td>
           </tr>
+
           <tr>
-            <td class="certname"><span class="en">CIC Canyoning Leader</span><span class="zh">CIC 峽谷嚮導</span><span class="gloss"><span class="en">international credibility</span><span class="zh">國際公信力</span></span></td>
-            <td><span class="en">Commission Internationale de Canyon</span><span class="zh">國際峽谷委員會</span></td>
-            <td class="num">EUR 500+/level</td>
-            <td class="num"><span class="en">varies</span><span class="zh">不一</span></td>
+            <td class="certname">山域嚮導 — 溯溪類<span class="gloss">Mountain Guide · Canyoning · 48+ hrs</span></td>
+            <td><a href="https://isports.sa.gov.tw/apps/MTG/index.aspx" target="_blank" rel="noopener">教育部運動部 iSports</a><br><span class="gloss"><span class="en">Training via</span><span class="zh">培訓:</span> <a href="https://www.formosa-adventure.com/product_description.php?PNo=110" target="_blank" rel="noopener">Formosa Adventure</a></span></td>
+            <td class="num">NT$30,800<br><span class="gloss">(train NT$26.8k + exam NT$4k)</span></td>
+            <td class="sched"><span class="en">After passing 健行類 · target Exam: Oct 16–18</span><span class="zh">健行類合格後 · 目標考試: 10/16–18</span></td>
+            <td class="renew"><span class="en">3 yr · 24 hr re-train</span><span class="zh">3 年 · 複訓 24 小時</span></td>
+            <td class="who">Dino</td>
+            <td class="status"><span class="badge req">P0</span><br><span class="badge prog"><span class="en">Not started</span><span class="zh">未開始</span></span></td>
+          </tr>
+
+          <tr class="group-head"><td colspan="7"><span class="en">Water safety</span><span class="zh">水上安全</span></td></tr>
+
+          <tr>
+            <td class="certname">紅十字會 水上安全救生員<span class="gloss">Water Safety Lifeguard · 30+ hrs</span></td>
+            <td><a href="https://www.redcross-class.org.tw/ClassInfo" target="_blank" rel="noopener">中華民國紅十字會</a><br><span class="gloss"><span class="en">Register via portal</span><span class="zh">線上報名</span></span></td>
+            <td class="num">~NT$10,000<br><span class="gloss">(confirm at portal)</span></td>
+            <td class="sched"><span class="en">Rolling per chapter · check portal for Taipei / Yilan dates</span><span class="zh">各縣市分會排班 · 見台北 / 宜蘭梯次</span></td>
+            <td class="renew"><span class="en">3 yr · re-train</span><span class="zh">3 年 · 複訓</span></td>
+            <td class="who">Dino · Apple · Luke</td>
+            <td class="status"><span class="badge rec">P1</span><br><span class="badge prog"><span class="en">Not started</span><span class="zh">未開始</span></span></td>
+          </tr>
+
+          <tr>
+            <td class="certname"><span class="en">Rescue 3 — Swiftwater Rescue Technician</span><span class="zh">Rescue 3 — 急流救援技術員</span><span class="gloss">SRT · 24 hrs</span></td>
+            <td><a href="https://wetplanetwhitewater.com/professional-training/river-rescue-rescue-3-srt-and-wrt-cert/" target="_blank" rel="noopener">Wet Planet WW</a> (WA, USA)<br><span class="gloss"><span class="en">via</span> <a href="https://www.rescue3.com/courses/swiftwater-and-flood-rescue-technician-srt/" target="_blank" rel="noopener">Rescue 3 Intl</a></span></td>
+            <td class="num">NT$16,800<br><span class="gloss">(USD 525)</span></td>
+            <td class="sched"><span class="en">Apr 8–10 · May 18–20 · more Apr–Sep (White Salmon, WA)</span><span class="zh">4/8–10 · 5/18–20 · 4–9 月多梯次(美國 WA 州)</span></td>
+            <td class="renew"><span class="en">3 yr · re-take SRT</span><span class="zh">3 年 · 重考 SRT</span></td>
+            <td class="who">Duncan</td>
+            <td class="status"><span class="badge req">P0</span><br><span class="badge prog"><span class="en">Not started</span><span class="zh">未開始</span></span></td>
+          </tr>
+
+          <tr class="group-head"><td colspan="7"><span class="en">Year 2+ — international credibility &amp; capacity</span><span class="zh">第 2 年以後 — 國際公信力與產能</span></td></tr>
+
+          <tr>
+            <td class="certname"><span class="en">CIC Canyoning Leader</span><span class="zh">CIC 峽谷嚮導</span><span class="gloss"><span class="en">international · multi-module</span><span class="zh">國際認證 · 多模組</span></span></td>
+            <td><a href="https://justcanyoning.org/canyoning-training-intro/" target="_blank" rel="noopener">JUST Canyoning (TW)</a><br><span class="gloss"><span class="en">only TW-based CIC instructor</span><span class="zh">目前台灣唯一 CIC 教練</span></span> / <a href="https://www.cic-canyoning.org/index-en.php.html" target="_blank" rel="noopener">CIC</a></td>
+            <td class="num"><span class="en">Quote</span><span class="zh">詢價</span><br><span class="gloss">(est. NT$15–40k / module)</span></td>
+            <td class="sched"><span class="en">Contact JUST Canyoning directly</span><span class="zh">直接聯繫 JUST 詢問</span></td>
+            <td class="renew"><span class="en">Periodic update training</span><span class="zh">定期更新訓練</span></td>
             <td class="who"><span class="en">Dino (Yr 2)</span><span class="zh">Dino(第 2 年)</span></td>
             <td class="status"><span class="badge opt"><span class="en">Optional · Y2</span><span class="zh">選配 · 第 2 年</span></span></td>
           </tr>
+
           <tr>
-            <td class="certname"><span class="en">Mandarin + English safety-briefing script</span><span class="zh">中英雙語安全須知腳本</span><span class="gloss">internal SOP</span></td>
+            <td class="certname"><span class="en">Bilingual safety-briefing script</span><span class="zh">雙語安全須知腳本</span><span class="gloss">EN / JP / ZH · internal SOP</span></td>
             <td><span class="en">In-house</span><span class="zh">內部</span></td>
             <td class="num">NT$0</td>
-            <td class="num">—</td>
+            <td class="sched">Q2 2026</td>
+            <td class="renew">—</td>
             <td class="who">Apple · Duncan</td>
             <td class="status"><span class="badge rec"><span class="en">Internal</span><span class="zh">內部</span></span></td>
           </tr>
+
         </tbody>
       </table>
+
+      <div class="prereq-box">
+        <div class="tag">⚠ <span class="en">Sequencing constraint — Dino</span><span class="zh">順序限制 — Dino</span></div>
+        <p style="font-size: 14px; line-height: 1.6; color: var(--ink-body);">
+          <strong style="color: var(--ink);"><span class="en">溯溪類 requires 健行類 first.</span><span class="zh">溯溪類須先取得健行類。</span></strong>
+          <span class="en">The official 山域嚮導 system requires passing the Hiking Guide (健行類) before unlocking the Canyoning (溯溪類) specialization. Dino must complete both sequentially. Realistic timeline: Train Jun → Exam 健行類 Jul → Train 溯溪類 Aug–Sep → Exam 溯溪類 Oct. Both certs achievable in 2026 if training enrollment confirmed by May.</span>
+          <span class="zh">官方 山域嚮導 系統須先通過健行類,才能解鎖溯溪類專項。Dino 須依序完成兩張證照。可行時程:6 月培訓 → 7 月健行類考試 → 8–9 月溯溪類培訓 → 10 月溯溪類考試。若 5 月前確認報名,兩張均可於 2026 年取得。</span>
+        </p>
+      </div>
     </section>
 
     <hr class="rule">
@@ -130,12 +192,13 @@
             <h3>Dino</h3>
             <span class="init"><span class="en">DH · Technical lead</span><span class="zh">DH · 技術主責</span></span>
           </div>
-          <p class="why"><span class="en">Climbing experience. Comfortable on rappel, anchors, and moving-water route-reading. Cert-holding lead guide.</span><span class="zh">具攀岩經驗,熟悉垂降、確保點設置與流水路線判讀。持證主嚮。</span></p>
+          <p class="why"><span class="en">Climbing experience. Comfortable on rappel, anchors, and moving-water route-reading. Cert-holding lead guide. Must do 健行類 first (prerequisite), then 溯溪類 in the same year.</span><span class="zh">具攀岩經驗,熟悉垂降、確保點設置與流水路線判讀。持證主嚮。須先取得健行類(前提條件),同年再考溯溪類。</span></p>
           <ul>
-            <li>山域嚮導 — 溯溪類 <em>(<span class="en">lead, P0</span><span class="zh">主責,P0</span>)</em> <span class="cost">Q1–Q2 · NT$35k</span></li>
-            <li>紅十字會 救生員 <em>(<span class="en">baseline</span><span class="zh">基本</span>)</em> <span class="cost">Q2 · NT$8k</span></li>
-            <li>CPR / BLS <span class="cost">Q1 · NT$3k</span></li>
-            <li><span class="en">Wilderness First Aid</span><span class="zh">野外急救 WFA</span> <span class="cost">Q3 · NT$10k</span></li>
+            <li>CPR / BLS <span class="cost">Q1 · NT$600</span></li>
+            <li>山域嚮導 — 健行類 <em>(<span class="en">prereq, P0</span><span class="zh">前提條件,P0</span>)</em> <span class="cost"><span class="en">Train Jun · Exam Jul · NT$26k</span><span class="zh">6 月培訓 · 7 月考試 · NT$26k</span></span></li>
+            <li>山域嚮導 — 溯溪類 <em>(<span class="en">lead guide, P0</span><span class="zh">主嚮,P0</span>)</em> <span class="cost"><span class="en">Train Aug–Sep · Exam Oct · NT$30.8k</span><span class="zh">8–9 月培訓 · 10 月考試 · NT$30.8k</span></span></li>
+            <li>紅十字會 救生員 <span class="cost">Q3–Q4 · ~NT$10k</span></li>
+            <li><span class="en">Wilderness First Aid</span><span class="zh">野外急救 WFA</span> <span class="cost">Q4 or Y2 · ~NT$11.2k</span></li>
             <li>CIC Canyoning Leader <em>(<span class="en">brand credibility</span><span class="zh">品牌公信力</span>)</em> <span class="cost"><span class="en">Year 2</span><span class="zh">第 2 年</span></span></li>
           </ul>
         </div>
@@ -147,10 +210,10 @@
           </div>
           <p class="why"><span class="en">Avid hiker. Established contacts at county offices and local Nanao vendors. Hiking variant of 山域嚮導 plus on-the-ground ops lead.</span><span class="zh">資深登山者,於縣府單位與南澳在地店家已有人脈。山域嚮導 健行類 + 現場運營主責。</span></p>
           <ul>
-            <li>山域嚮導 — 健行類 <em>(P0)</em> <span class="cost">Q1–Q2 · NT$28k</span></li>
-            <li>紅十字會 救生員 <span class="cost">Q2 · NT$8k</span></li>
-            <li>CPR / BLS <span class="cost">Q1 · NT$3k</span></li>
-            <li><span class="en">Wilderness First Aid</span><span class="zh">野外急救 WFA</span> <span class="cost">Q3 · NT$10k</span></li>
+            <li>CPR / BLS <span class="cost">Q1 · NT$600</span></li>
+            <li>山域嚮導 — 健行類 <em>(P0)</em> <span class="cost"><span class="en">Train Jun · Exam Jul · NT$26k</span><span class="zh">6 月培訓 · 7 月考試 · NT$26k</span></span></li>
+            <li>紅十字會 救生員 <span class="cost">Q3 · ~NT$10k</span></li>
+            <li><span class="en">Wilderness First Aid</span><span class="zh">野外急救 WFA</span> <span class="cost">Q4 or Y2 · ~NT$11.2k</span></li>
             <li><span class="en">Relationship "certs" — Nanao township, Yilan 觀光處, Forestry Agency</span><span class="zh">關係「證照」 — 南澳鄉公所、宜蘭 觀光處、林業署</span> <span class="cost"><span class="en">Q1 ongoing</span><span class="zh">Q1 持續</span></span></li>
           </ul>
         </div>
@@ -162,10 +225,10 @@
           </div>
           <p class="why"><span class="en">Strongest swimmer, all-around athlete. US-based, so the cheapest path to elite water credentials. Owns on-trip water safety; qualifies as 安全人員 via foreign cert while pursuing TW cert in Year 2.</span><span class="zh">全隊最強泳者,全能運動員。現居美國,是取得國際水上證照最低成本的路徑。出團時負責水上安全;以國外證照擔任 安全人員,並於第 2 年取得台灣證照。</span></p>
           <ul>
-            <li>Rescue 3 SRT <em>(<span class="en">P0, US-based</span><span class="zh">P0,於美國</span>)</em> <span class="cost">Q1–Q2 · USD 900</span></li>
-            <li><span class="en">US Red Cross Lifeguard</span><span class="zh">美國紅十字會 救生員</span> <em>(<span class="en">TW equivalence</span><span class="zh">台灣等效</span>)</em> <span class="cost">Q1 · USD 250</span></li>
-            <li>CPR / BLS <em>(AHA)</em> <span class="cost">Q1 · USD 75</span></li>
-            <li>山域嚮導 — 溯溪類 <em>(<span class="en">after relocation</span><span class="zh">搬回台灣後</span>)</em> <span class="cost"><span class="en">Year 2 · NT$35k</span><span class="zh">第 2 年 · NT$35k</span></span></li>
+            <li>CPR / BLS <em>(AHA)</em> <span class="cost">Q1 · ~NT$2,500 (USD 75)</span></li>
+            <li>Rescue 3 SRT <em>(<span class="en">P0, US-based</span><span class="zh">P0,於美國</span>)</em> <span class="cost"><span class="en">Apr 8–10 or May 18–20 · NT$16,800 (USD 525)</span><span class="zh">4/8–10 或 5/18–20 · NT$16,800</span></span></li>
+            <li><span class="en">Wilderness First Aid</span><span class="zh">野外急救 WFA</span> <span class="cost">Q2–Q3 · ~NT$11.2k</span></li>
+            <li>山域嚮導 — 健行類 + 溯溪類 <em>(<span class="en">after relocation</span><span class="zh">搬回台灣後</span>)</em> <span class="cost"><span class="en">Year 2 · NT$56.8k</span><span class="zh">第 2 年 · NT$56.8k</span></span></li>
           </ul>
         </div>
 
@@ -176,8 +239,9 @@
           </div>
           <p class="why"><span class="en">Strongest sales / social skills in the group. Japanese-speaking. Owns the customer from inquiry to review. Safety-qualified enough to assist on-trip; not pursuing lead-guide cert — his edge is opening the Japanese channel nobody else is serving.</span><span class="zh">全隊最強的銷售與社交力,通曉日文。主責客戶從詢問到評價全流程。具備足以協助出團的安全資格;不追求主嚮證照 — 他的優勢在於打開目前無人服務的日本市場通路。</span></p>
           <ul>
-            <li>紅十字會 救生員 <em>(<span class="en">P0 baseline</span><span class="zh">P0 基本</span>)</em> <span class="cost">Q1–Q2 · NT$8k</span></li>
-            <li>CPR / BLS <span class="cost">Q1 · NT$3k</span></li>
+            <li>CPR / BLS <span class="cost">Q1 · NT$600</span></li>
+            <li>紅十字會 救生員 <em>(<span class="en">P1 baseline</span><span class="zh">P1 基本</span>)</em> <span class="cost">Q2 · ~NT$10k</span></li>
+            <li><span class="en">Wilderness First Aid</span><span class="zh">野外急救 WFA</span> <span class="cost">Q3–Q4 · ~NT$11.2k</span></li>
             <li><span class="en">Japanese sales ops — VELTRA + Locotabi applications</span><span class="zh">日本銷售通路 — VELTRA + Locotabi 申請</span> <span class="cost">Q3–Q4</span></li>
             <li><span class="en">Customer-service SOP authorship</span><span class="zh">客服 SOP 撰寫</span> <span class="cost">Q2</span></li>
             <li><span class="en">Optional: 救生員 Jr. instructor track</span><span class="zh">選配:救生員 初階教練路徑</span> <span class="cost"><span class="en">Year 2</span><span class="zh">第 2 年</span></span></li>
@@ -249,34 +313,42 @@
 
       <table class="ledger" style="margin-top: 48px; width: 100%; border-collapse: collapse;">
         <tr style="border-top: 2px solid var(--ink);">
-          <td style="padding: 14px 0;"><span class="en">Dino — 溯溪類 + 救生員 + CPR + WFA</span><span class="zh">Dino — 溯溪類 + 救生員 + CPR + WFA</span></td>
-          <td style="text-align: right; font-family: var(--mono); padding: 14px 0; color: var(--ink);">NT$ 56,000</td>
+          <td style="padding: 14px 0; font-size: 13px; color: var(--mute); font-family: var(--mono); letter-spacing: 0.08em;"><span class="en">Founder · Certs included</span><span class="zh">創辦人 · 包含證照</span></td>
+          <td style="text-align: right; font-size: 13px; color: var(--mute); font-family: var(--mono); padding: 14px 0; letter-spacing: 0.08em;"><span class="en">Cost (NTD)</span><span class="zh">費用</span></td>
+        </tr>
+        <tr style="border-top: 1px solid var(--rule-fine);">
+          <td style="padding: 14px 0;"><span class="en">Dino — 健行類 + 溯溪類 + 救生員 + CPR + WFA</span><span class="zh">Dino — 健行類 + 溯溪類 + 救生員 + CPR + WFA</span></td>
+          <td style="text-align: right; font-family: var(--mono); padding: 14px 0; color: var(--ink);">NT$ 78,600</td>
         </tr>
         <tr style="border-top: 1px solid var(--rule-fine);">
           <td style="padding: 14px 0;"><span class="en">Luke — 健行類 + 救生員 + CPR + WFA</span><span class="zh">Luke — 健行類 + 救生員 + CPR + WFA</span></td>
-          <td style="text-align: right; font-family: var(--mono); padding: 14px 0; color: var(--ink);">NT$ 49,000</td>
+          <td style="text-align: right; font-family: var(--mono); padding: 14px 0; color: var(--ink);">NT$ 47,800</td>
         </tr>
         <tr style="border-top: 1px solid var(--rule-fine);">
-          <td style="padding: 14px 0;"><span class="en">Duncan — SRT + US Lifeguard + BLS (USD ~1,225)</span><span class="zh">Duncan — SRT + 美國救生員 + BLS(約 USD 1,225)</span></td>
-          <td style="text-align: right; font-family: var(--mono); padding: 14px 0; color: var(--ink);">NT$ 39,000</td>
+          <td style="padding: 14px 0;"><span class="en">Duncan — SRT + CPR (AHA) + WFA · all US-based</span><span class="zh">Duncan — SRT + CPR (AHA) + WFA · 皆於美國</span></td>
+          <td style="text-align: right; font-family: var(--mono); padding: 14px 0; color: var(--ink);">NT$ 30,400</td>
         </tr>
         <tr style="border-top: 1px solid var(--rule-fine);">
-          <td style="padding: 14px 0;"><span class="en">Apple — 救生員 + CPR</span><span class="zh">Apple — 救生員 + CPR</span></td>
-          <td style="text-align: right; font-family: var(--mono); padding: 14px 0; color: var(--ink);">NT$ 11,000</td>
+          <td style="padding: 14px 0;"><span class="en">Apple — 救生員 + CPR + WFA</span><span class="zh">Apple — 救生員 + CPR + WFA</span></td>
+          <td style="text-align: right; font-family: var(--mono); padding: 14px 0; color: var(--ink);">NT$ 21,800</td>
         </tr>
         <tr style="border-top: 2px solid var(--ink); font-family: var(--serif); font-weight: 500;">
-          <td style="padding: 14px 0;"><span class="en">Total — full roster</span><span class="zh">合計 — 完整編組</span></td>
-          <td style="text-align: right; font-family: var(--mono); padding: 14px 0; color: var(--ink); font-weight: 500;">NT$ 155,000</td>
+          <td style="padding: 14px 0;"><span class="en">Total — full Y1 roster with WFA for all</span><span class="zh">合計 — 完整第 1 年含 WFA</span></td>
+          <td style="text-align: right; font-family: var(--mono); padding: 14px 0; color: var(--ink); font-weight: 500;">NT$ 178,600</td>
         </tr>
         <tr style="border-top: 1px solid var(--rule-fine);">
-          <td style="padding: 14px 0; color: var(--clay);"><span class="en">Minimum viable — defer WFA + Duncan's US certs to Y2</span><span class="zh">最小可行 — 將 WFA 與 Duncan 的美國證照延至第 2 年</span></td>
-          <td style="text-align: right; font-family: var(--mono); padding: 14px 0; color: var(--clay);">NT$ 80,000</td>
+          <td style="padding: 14px 0; color: var(--clay);"><span class="en">Minimum viable — defer WFA for all to Y2 (save NT$44,800)</span><span class="zh">最小可行 — 全員 WFA 延至第 2 年(省 NT$44,800)</span></td>
+          <td style="text-align: right; font-family: var(--mono); padding: 14px 0; color: var(--clay);">NT$ 133,800</td>
+        </tr>
+        <tr style="border-top: 1px solid var(--rule-fine);">
+          <td style="padding: 14px 0; color: var(--clay);"><span class="en">Hard floor — Dino's two 山域嚮導 + Duncan's SRT + CPR for all (operational minimum)</span><span class="zh">底線 — Dino 雙證 + Duncan SRT + 四人 CPR(運營最低限度)</span></td>
+          <td style="text-align: right; font-family: var(--mono); padding: 14px 0; color: var(--clay);">NT$ 82,200</td>
         </tr>
       </table>
 
       <div style="margin-top: 48px; padding: 24px 28px; background: var(--paper-warm); border-left: 3px solid var(--clay); max-width: 62ch;">
-        <div class="mono" style="color: var(--clay); margin-bottom: 8px;"><span class="en">Budget reconciliation</span><span class="zh">預算對賬</span></div>
-        <p style="font-size: 15px; line-height: 1.6; color: var(--ink-body);"><span class="en">Full cert roster (NT$155k) exceeds the NT$40k cert line in the main budget by NT$115k. Two levers: <strong style="color: var(--ink);">defer WFA + Duncan's US certs to year 2</strong> (brings Y1 cert spend to NT$80k), or <strong style="color: var(--ink);">founders each pay their own Y1 certs personally</strong> as equity-equivalent contribution. Decide at first weekly sync — the answer may vary by founder.</span><span class="zh">完整證照組合(NT$155k)較主預算 NT$40k 之證照項多 NT$115k。兩個槓桿:<strong style="color: var(--ink);">將 WFA 與 Duncan 的美國證照延至第 2 年</strong>(第 1 年證照支出降至 NT$80k),或 <strong style="color: var(--ink);">創辦人各自自費支付第 1 年證照</strong>,視為等同股權之出資。首次週會再定案 — 各人答案可能不同。</span></p>
+        <div class="mono" style="color: var(--clay); margin-bottom: 8px;"><span class="en">Budget note</span><span class="zh">預算說明</span></div>
+        <p style="font-size: 15px; line-height: 1.6; color: var(--ink-body);"><span class="en">Full Y1 roster (NT$178.6k) significantly exceeds the NT$40k cert line in the original budget. Key lever: <strong style="color: var(--ink);">defer WFA for all to Year 2</strong> once a Taiwan 2027 session is confirmed (saves NT$44.8k; Crossing Latitudes needs 15 participants — we could co-organize). Hard floor is NT$82.2k for the certs needed to run legal paid trips in 2026. Recommend founders self-fund their individual certs as equity-equivalent contribution and settle at first weekly sync.</span><span class="zh">完整第 1 年證照組合(NT$178.6k)遠超原始預算 NT$40k 之證照項。關鍵槓桿:<strong style="color: var(--ink);">全員 WFA 延至第 2 年</strong>,待 2027 台灣梯次確定後再報名(省 NT$44.8k;Crossing Latitudes 需 15 人起班 — 可考慮自辦)。合法付費出團所需最低門檻為 NT$82.2k。建議創辦人各自自費支付個人證照作為等同股權出資,首次週會定案。</span></p>
       </div>
     </section>
 
