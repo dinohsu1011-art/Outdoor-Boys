@@ -1,307 +1,52 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Outdoor Boys — Field Log</title>
-  <meta name="description" content="Pre-launch dashboard for Outdoor Boys, a Taiwan adventure guiding company. Timeline, crew tasks, budget." />
-  <script src="i18n.js?v=3"></script>
-  <link rel="stylesheet" href="styles.css?v=5">
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Outdoor Boys</title>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{height:100%;background:#0c1510;color:#c9d6cd;font-family:'Trebuchet MS','Calibri',sans-serif}
+  body{display:flex;align-items:center;justify-content:center;min-height:100vh;padding:32px}
+  .wrap{max-width:480px;width:100%}
+  .logo{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#5a7a64;margin-bottom:40px}
+  h1{font-size:clamp(36px,7vw,64px);font-weight:700;line-height:.95;color:#e4ede4;margin-bottom:28px;letter-spacing:-0.02em}
+  .links{display:flex;flex-direction:column;gap:4px;margin-top:48px}
+  .link-item{display:flex;align-items:baseline;gap:16px;padding:16px 0;border-top:1px solid rgba(174,194,180,.15);text-decoration:none;color:inherit;transition:color .2s}
+  .link-item:hover{color:#e4ede4}
+  .link-item:hover .arrow{transform:translateX(4px)}
+  .link-num{font-size:11px;letter-spacing:.1em;color:#3d5a47;flex-shrink:0;font-variant-numeric:tabular-nums}
+  .link-body{flex:1}
+  .link-title{font-size:18px;font-weight:600;color:#c9d6cd;margin-bottom:2px;transition:color .2s}
+  .link-item:hover .link-title{color:#e4ede4}
+  .link-sub{font-size:13px;color:#5a7a64}
+  .arrow{font-size:16px;color:#3d5a47;transition:transform .2s}
+  .tag{display:inline-block;font-size:10px;letter-spacing:.12em;text-transform:uppercase;padding:2px 8px;border:1px solid rgba(174,194,180,.2);border-radius:2px;color:#5a7a64;margin-left:8px;vertical-align:middle}
+</style>
 </head>
 <body>
+<div class="wrap">
+  <div class="logo">Outdoor Boys · Nan'ao, Yilan</div>
+  <h1>Where<br>do you<br>want to go?</h1>
 
-  <nav class="top">
-    <a href="index.html" class="brand">Outdoor<em>·</em>Boys</a>
-    <ul>
-      <li><a class="link active" href="index.html"><span class="en">Field Log</span><span class="zh">儀表板</span></a></li>
-      <li><a class="link" href="business-plan.html"><span class="en">Business Plan</span><span class="zh">商業計畫</span></a></li>
-      <li><a class="link" href="regulatory.html"><span class="en">Regulations</span><span class="zh">法規</span></a></li>
-      <li><a class="link" href="certs.html"><span class="en">Licenses</span><span class="zh">證照</span></a></li>
-      <li><button class="lang-toggle" onclick="toggleLang()"><span class="en">中</span><span class="zh">EN</span></button></li>
-    </ul>
+  <nav class="links">
+    <a class="link-item" href="landing/">
+      <span class="link-num">01</span>
+      <span class="link-body">
+        <div class="link-title">Public Landing Page <span class="tag">Live</span></div>
+        <div class="link-sub">Customer-facing site — river tracing, guided trips</div>
+      </span>
+      <span class="arrow">→</span>
+    </a>
+    <a class="link-item" href="dashboard/">
+      <span class="link-num">02</span>
+      <span class="link-body">
+        <div class="link-title">Ops Dashboard <span class="tag">Internal</span></div>
+        <div class="link-sub">Regulatory research, certifications, business plan</div>
+      </span>
+      <span class="arrow">→</span>
+    </a>
   </nav>
-
-  <main class="wrap">
-
-    <!-- ===================== HERO ===================== -->
-    <section class="hero" style="padding: 48px 0 72px;">
-      <div class="mono sectnum"><span class="en">Internal dashboard · updated 21 April 2026</span><span class="zh">內部儀表板 · 更新於 2026 年 4 月 21 日</span></div>
-
-      <h1 style="font-family: var(--serif); font-size: 44px; font-weight: 500; letter-spacing: -0.015em; color: var(--ink); line-height: 1.1;">Outdoor Boys</h1>
-
-      <div style="display:grid; grid-template-columns: repeat(4, 1fr); gap: 40px; margin-top: 48px; padding-top: 28px; border-top: 2px solid var(--ink);">
-        <div>
-          <div class="kicker" style="margin-bottom:10px;"><span class="en">Target Launch</span><span class="zh">目標上線</span></div>
-          <div style="font-family: var(--serif); font-size: 28px; line-height:1.1; font-weight:500; color: var(--ink);"><span class="en">21 Apr 2027</span><span class="zh">2027 年 4 月 21 日</span></div>
-          <div class="mono" style="font-size:11px; margin-top:6px;"><span class="en">Q4 · Open to inbound</span><span class="zh">Q4 · 對海外旅客開放</span></div>
-        </div>
-        <div>
-          <div class="kicker" style="margin-bottom:10px;"><span class="en">Crew</span><span class="zh">團隊</span></div>
-          <div style="font-family: var(--serif); font-size: 28px; line-height:1.1; font-weight:500; color: var(--ink);"><span class="en">4 founders</span><span class="zh">四位創辦人</span></div>
-          <div class="mono" style="font-size:11px; margin-top:6px;"><span class="en">3 TW · 1 US</span><span class="zh">3 位台灣 · 1 位美國</span></div>
-        </div>
-        <div>
-          <div class="kicker" style="margin-bottom:10px;"><span class="en">Capital</span><span class="zh">資本</span></div>
-          <div style="font-family: var(--serif); font-size: 28px; line-height:1.1; font-weight:500; color: var(--ink);">NT$100k</div>
-          <div class="mono" style="font-size:11px; margin-top:6px;"><span class="en">Plus NT$500k paid-in for entity</span><span class="zh">另 NT$500k 為公司實收資本</span></div>
-        </div>
-        <div>
-          <div class="kicker" style="margin-bottom:10px;"><span class="en">Base</span><span class="zh">營運基地</span></div>
-          <div style="font-family: var(--serif); font-size: 28px; line-height:1.1; font-weight:500; color: var(--ink);"><span class="en">Nanao, Yilan</span><span class="zh">宜蘭 南澳</span></div>
-          <div class="mono" style="font-size:11px; margin-top:6px;"><span class="en">Pending lawyer confirm</span><span class="zh">待律師確認</span></div>
-        </div>
-      </div>
-    </section>
-
-    <hr class="rule">
-
-    <!-- ===================== ROADMAP ===================== -->
-    <section>
-      <div class="sectnum"><span class="en">§ 01 · Roadmap</span><span class="zh">§ 01 · 路徑圖</span></div>
-      <h2 style="font-family: var(--serif); font-size: 32px; font-weight: 500; letter-spacing: -0.015em; color: var(--ink);"><span class="en">Roadmap</span><span class="zh">路徑圖</span></h2>
-
-      <div class="timeline">
-        <div class="rail">
-
-          <div class="q">
-            <div class="qn"><span class="en">Q1 · now → Jul 2026</span><span class="zh">Q1 · 現在 → 2026 年 7 月</span></div>
-            <div class="qdates"><span class="en">Apr — Jul</span><span class="zh">4 月 — 7 月</span></div>
-            <div class="qtitle"><span class="en">Learn the rules</span><span class="zh">熟悉法規</span></div>
-            <ul>
-              <li><span class="who">DH</span><span class="en">Book NT$5–10k lawyer consultation</span><span class="zh">預約 NT$5–10k 律師諮詢</span></li>
-              <li><span class="who">DH</span><span class="en">Set up Shared Drive + master tracker</span><span class="zh">建立共享雲端硬碟 + 主追蹤表</span></li>
-              <li><span class="who">DH</span><span class="en">Enroll in 山域嚮導 — 溯溪類 program</span><span class="zh">報名 山域嚮導 — 溯溪類</span></li>
-              <li><span class="who">LU</span><span class="en">Nanao township + Yilan 觀光處 outreach</span><span class="zh">拜訪 南澳鄉公所 + 宜蘭觀光處</span></li>
-              <li><span class="who">LU</span><span class="en">Register 山域嚮導 — 健行類</span><span class="zh">報名 山域嚮導 — 健行類</span></li>
-              <li><span class="who">DC</span><span class="en">Enroll in Rescue 3 SRT (California)</span><span class="zh">報名 Rescue 3 SRT(加州)</span></li>
-              <li><span class="who">AP</span><span class="en">Enroll 紅十字會 救生員 + CPR/BLS</span><span class="zh">報名 紅十字會 救生員 + CPR/BLS</span></li>
-              <li><span class="who">ALL</span><span class="en">Draft founders agreement</span><span class="zh">起草創辦人協議</span></li>
-            </ul>
-          </div>
-
-          <div class="q">
-            <div class="qn"><span class="en">Q2 · Jul → Oct 2026</span><span class="zh">Q2 · 2026 年 7 月 → 10 月</span></div>
-            <div class="qdates"><span class="en">Jul — Oct</span><span class="zh">7 月 — 10 月</span></div>
-            <div class="qtitle"><span class="en">Get certified and legal</span><span class="zh">完成證照與合法落地</span></div>
-            <ul>
-              <li><span class="who">DH</span><span class="en">Pass 溯溪類 written + practical exam</span><span class="zh">通過 溯溪類 筆試 + 實務考</span></li>
-              <li><span class="who">DH</span><span class="en">Register 有限公司 + FIA filing</span><span class="zh">成立有限公司 + FIA 外資申報</span></li>
-              <li><span class="who">DH</span><span class="en">Bind 公共意外責任保險</span><span class="zh">投保 公共意外責任保險</span></li>
-              <li><span class="who">LU</span><span class="en">Complete 健行類 cert</span><span class="zh">取得 健行類 證照</span></li>
-              <li><span class="who">LU</span><span class="en">Scout 鹿皮溪 + 金岳 pilot routes</span><span class="zh">探勘 鹿皮溪 + 金岳 試行路線</span></li>
-              <li><span class="who">LU</span><span class="en">Confirm 14-day filing SOP with Yilan</span><span class="zh">與宜蘭確認 14 天事前報備 SOP</span></li>
-              <li><span class="who">DC</span><span class="en">Complete SRT; draft EN brand voice</span><span class="zh">完成 SRT;起草英文品牌口吻</span></li>
-              <li><span class="who">AP</span><span class="en">Complete 救生員; customer ops SOP</span><span class="zh">完成 救生員;客服作業 SOP</span></li>
-            </ul>
-          </div>
-
-          <div class="q">
-            <div class="qn"><span class="en">Q3 · Oct 2026 → Jan 2027</span><span class="zh">Q3 · 2026 年 10 月 → 2027 年 1 月</span></div>
-            <div class="qdates"><span class="en">Oct — Jan</span><span class="zh">10 月 — 1 月</span></div>
-            <div class="qtitle"><span class="en">Soft launch with expats</span><span class="zh">以在台外國人軟上線</span></div>
-            <ul>
-              <li><span class="who">DH</span><span class="en">Ship English-first website + Stripe</span><span class="zh">上線英文為主的網站 + Stripe</span></li>
-              <li><span class="who">DH</span><span class="en">Scout + lead 5 free friend trips</span><span class="zh">探勘並帶領 5 趟免費親友團</span></li>
-              <li><span class="who">LU</span><span class="en">Gear buy + kit storage in Nanao</span><span class="zh">採購裝備 + 於南澳建立裝備庫</span></li>
-              <li><span class="who">LU</span><span class="en">On-the-ground ops for trial trips</span><span class="zh">負責試行團現場運營</span></li>
-              <li><span class="who">DC</span><span class="en">US-market awareness experiments</span><span class="zh">美國市場聲量實驗</span></li>
-              <li><span class="who">AP</span><span class="en">List on KKday + Klook as activity</span><span class="zh">以活動方式上架 KKday + Klook</span></li>
-              <li><span class="who">AP</span><span class="en">Japanese copy + VELTRA application</span><span class="zh">日文文案 + VELTRA 申請</span></li>
-              <li><span class="who">ALL</span><span class="en">10 paid expat trips, collect reviews</span><span class="zh">10 趟付費外籍友客團,蒐集評價</span></li>
-            </ul>
-          </div>
-
-          <div class="q">
-            <div class="qn"><span class="en">Q4 · Jan → Apr 2027</span><span class="zh">Q4 · 2027 年 1 月 → 4 月</span></div>
-            <div class="qdates"><span class="en">Jan — Apr</span><span class="zh">1 月 — 4 月</span></div>
-            <div class="qtitle"><span class="en">Open to inbound</span><span class="zh">對海外旅客開放</span></div>
-            <ul>
-              <li><span class="who">DH</span><span class="en">SEO + English content engine</span><span class="zh">SEO + 英文內容產製</span></li>
-              <li><span class="who">LU</span><span class="en">Scale route portfolio to 3–4 SKUs</span><span class="zh">擴展至 3–4 條主力路線</span></li>
-              <li><span class="who">LU</span><span class="en">Relationship with second outfitter</span><span class="zh">建立第二家在地合作夥伴</span></li>
-              <li><span class="who">DC</span><span class="en">Relocate to TW (soft target)</span><span class="zh">搬回台灣(軟性目標)</span></li>
-              <li><span class="who">AP</span><span class="en">Japanese launch via Locotabi</span><span class="zh">透過 Locotabi 日本上線</span></li>
-              <li><span class="who">AP</span><span class="en">IG + TikTok top-of-funnel</span><span class="zh">IG + TikTok 上層漏斗</span></li>
-              <li><span class="who">ALL</span><span class="en">10+ paid foreign-tourist trips</span><span class="zh">10+ 趟付費外籍旅客團</span></li>
-              <li><span class="who">ALL</span><span class="en">Full-time transition decision</span><span class="zh">是否轉全職之決定</span></li>
-            </ul>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <hr class="rule">
-
-    <!-- ===================== CREW ===================== -->
-    <section>
-      <div class="sectnum"><span class="en">§ 02 · Crew &amp; tasks</span><span class="zh">§ 02 · 團隊與任務</span></div>
-      <h2 style="font-family: var(--serif); font-size: 32px; font-weight: 500; letter-spacing: -0.015em; color: var(--ink);"><span class="en">Crew &amp; tasks</span><span class="zh">團隊與任務</span></h2>
-
-      <div class="crew">
-
-        <article class="crew-entry">
-          <div class="name">Dino<span class="surname"><span class="en">Hsu · Taiwanese</span><span class="zh">許 · 台灣人</span></span></div>
-          <div class="role">
-            <div class="tag"><span class="en">Strength</span><span class="zh">專長</span></div>
-            <div class="strength"><span class="en">Climbing experience. Comfortable on technical rope and rappel. Cert-holding lead guide.</span><span class="zh">具攀岩經驗,熟悉技術繩索與垂降操作。持證主嚮。</span></div>
-            <dl>
-              <dt><span class="en">Role</span><span class="zh">角色</span></dt><dd><span class="en">Lead guide · Finance · Website · Strategy</span><span class="zh">主嚮 · 財務 · 網站 · 策略</span></dd>
-              <dt><span class="en">Cert path</span><span class="zh">證照路徑</span></dt><dd>山域嚮導 — 溯溪類 (P0) · 救生員</dd>
-              <dt><span class="en">Languages</span><span class="zh">語言</span></dt><dd><span class="en">EN · 中文 · 日本語 (conversational)</span><span class="zh">中文 · 英文 · 日文(會話)</span></dd>
-              <dt><span class="en">Location</span><span class="zh">所在地</span></dt><dd><span class="en">Taiwan</span><span class="zh">台灣</span></dd>
-            </dl>
-          </div>
-          <div class="tasks">
-            <div class="tlabel"><span><span class="en">Tasks assigned</span><span class="zh">任務分派</span></span><span><span class="en">Quarter</span><span class="zh">季度</span></span></div>
-            <ol>
-              <li class="p0"><span class="en">Book lawyer consultation — NT$5–10k, bring the 10 open questions</span><span class="zh">預約律師諮詢 — NT$5–10k,帶上 10 條待釐清問題</span><span class="q-tag">Q1</span></li>
-              <li class="p0"><span class="en">Set up Shared Drive + master tracker this week</span><span class="zh">本週建好共享雲端硬碟 + 主追蹤表</span><span class="q-tag">Q1</span></li>
-              <li class="p0"><span class="en">Enroll 山域嚮導 溯溪類 program</span><span class="zh">報名 山域嚮導 溯溪類</span><span class="q-tag">Q1</span></li>
-              <li class="p0"><span class="en">Pass 溯溪類 written + practical exam</span><span class="zh">通過 溯溪類 筆試 + 實務考</span><span class="q-tag">Q2</span></li>
-              <li class="p0"><span class="en">Register 有限公司 + FIA for Duncan's share</span><span class="zh">成立有限公司 + 為 Duncan 持股辦 FIA</span><span class="q-tag">Q2</span></li>
-              <li class="p0"><span class="en">Bind 公共意外責任保險 with 溯溪 rider</span><span class="zh">投保 公共意外責任保險 並加 溯溪 附加條款</span><span class="q-tag">Q2</span></li>
-              <li><span class="en">Scout 鹿皮溪 + 金岳 pilot routes w/ Luke</span><span class="zh">與 Luke 一同探勘 鹿皮溪 + 金岳 試行路線</span><span class="q-tag">Q2</span></li>
-              <li><span class="en">Ship English-first booking site + Stripe</span><span class="zh">上線以英文為主的預訂網站 + Stripe</span><span class="q-tag">Q3</span></li>
-              <li><span class="en">Lead 5 free friend trips before Q3 launch</span><span class="zh">Q3 上線前帶領 5 趟免費親友團</span><span class="q-tag">Q3</span></li>
-              <li><span class="en">SEO + English content engine</span><span class="zh">SEO + 英文內容產製</span><span class="q-tag">Q4</span></li>
-            </ol>
-          </div>
-        </article>
-
-        <article class="crew-entry">
-          <div class="name">Luke<span class="surname"><span class="en">Taiwanese · in-country ops</span><span class="zh">台灣人 · 在地運營</span></span></div>
-          <div class="role">
-            <div class="tag"><span class="en">Strength</span><span class="zh">專長</span></div>
-            <div class="strength"><span class="en">Avid hiker. Established local contacts across Yilan county offices and Nanao vendors.</span><span class="zh">資深登山者。於宜蘭縣府單位與南澳在地店家建立完整人脈。</span></div>
-            <dl>
-              <dt><span class="en">Role</span><span class="zh">角色</span></dt><dd><span class="en">Ops · Permits · Community liaison · Co-guide</span><span class="zh">運營 · 許可 · 社區聯絡 · 副嚮</span></dd>
-              <dt><span class="en">Cert path</span><span class="zh">證照路徑</span></dt><dd>山域嚮導 — 健行類 · 救生員</dd>
-              <dt><span class="en">Languages</span><span class="zh">語言</span></dt><dd>中文 · 台語</dd>
-              <dt><span class="en">Location</span><span class="zh">所在地</span></dt><dd><span class="en">Taiwan</span><span class="zh">台灣</span></dd>
-            </dl>
-          </div>
-          <div class="tasks">
-            <div class="tlabel"><span><span class="en">Tasks assigned</span><span class="zh">任務分派</span></span><span><span class="en">Quarter</span><span class="zh">季度</span></span></div>
-            <ol>
-              <li class="p0"><span class="en">Nanao township + Yilan 觀光處 introductory visit</span><span class="zh">首訪 南澳鄉公所 + 宜蘭 觀光處</span><span class="q-tag">Q1</span></li>
-              <li class="p0"><span class="en">Register 山域嚮導 健行類</span><span class="zh">報名 山域嚮導 健行類</span><span class="q-tag">Q1</span></li>
-              <li><span class="en">Confirm 鹿皮溪 / 金岳 land status w/ Forestry Agency</span><span class="zh">向林業署確認 鹿皮溪 / 金岳 土地狀態</span><span class="q-tag">Q1</span></li>
-              <li class="p0"><span class="en">Scout 2–3 pilot routes, document hazards</span><span class="zh">探勘 2–3 條試行路線並紀錄風險</span><span class="q-tag">Q2</span></li>
-              <li class="p0"><span class="en">Establish 14-day pre-activity filing SOP w/ Yilan</span><span class="zh">與宜蘭建立 14 天事前報備 SOP</span><span class="q-tag">Q2</span></li>
-              <li><span class="en">Secure shuttle + gear-storage partnership in Nanao</span><span class="zh">在南澳談妥接駁 + 裝備寄放合作</span><span class="q-tag">Q2</span></li>
-              <li><span class="en">Buy + inventory shared kit</span><span class="zh">採購並盤點共用裝備</span><span class="q-tag">Q3</span></li>
-              <li><span class="en">Lead on-the-ground ops for trial trips</span><span class="zh">試行團現場運營負責人</span><span class="q-tag">Q3</span></li>
-              <li><span class="en">Expand route portfolio to 3–4 SKUs</span><span class="zh">擴展至 3–4 條主力路線</span><span class="q-tag">Q4</span></li>
-              <li><span class="en">Onboard second local outfitter partnership</span><span class="zh">建立第二家在地合作店家</span><span class="q-tag">Q4</span></li>
-            </ol>
-          </div>
-        </article>
-
-        <article class="crew-entry">
-          <div class="name">Duncan<span class="surname"><span class="en">American · US-based, relocating Yr 2</span><span class="zh">美國人 · 現居美國,第二年搬回台灣</span></span></div>
-          <div class="role">
-            <div class="tag"><span class="en">Strength</span><span class="zh">專長</span></div>
-            <div class="strength"><span class="en">Strongest swimmer, all-around athlete. Water-safety officer on-trip; runs English brand voice and US-side marketing.</span><span class="zh">全隊最強泳者,全能型運動員。出團時擔任水上安全官;主責英文品牌口吻與美國市場行銷。</span></div>
-            <dl>
-              <dt><span class="en">Role</span><span class="zh">角色</span></dt><dd><span class="en">Safety officer · US-market channel · Brand voice</span><span class="zh">安全官 · 美國市場通路 · 品牌口吻</span></dd>
-              <dt><span class="en">Cert path</span><span class="zh">證照路徑</span></dt><dd><span class="en">Rescue 3 SRT · US Red Cross equivalent · 安全人員 (via foreign cert)</span><span class="zh">Rescue 3 SRT · 美國紅十字會等效證照 · 安全人員(採國外證照認可)</span></dd>
-              <dt><span class="en">Languages</span><span class="zh">語言</span></dt><dd>EN · 中文</dd>
-              <dt><span class="en">Location</span><span class="zh">所在地</span></dt><dd><span class="en">California (US)</span><span class="zh">美國 加州</span></dd>
-            </dl>
-          </div>
-          <div class="tasks">
-            <div class="tlabel"><span><span class="en">Tasks assigned</span><span class="zh">任務分派</span></span><span><span class="en">Quarter</span><span class="zh">季度</span></span></div>
-            <ol>
-              <li class="p0"><span class="en">Enroll Rescue 3 SRT (Swiftwater Rescue Tech)</span><span class="zh">報名 Rescue 3 SRT(急流救援技術)</span><span class="q-tag">Q1</span></li>
-              <li><span class="en">Complete US Red Cross Lifeguard / CPR-BLS</span><span class="zh">取得 美國紅十字會 救生員 / CPR-BLS</span><span class="q-tag">Q1</span></li>
-              <li><span class="en">Draft English brand voice guide</span><span class="zh">起草英文品牌口吻指南</span><span class="q-tag">Q1</span></li>
-              <li class="p0"><span class="en">Complete SRT certification</span><span class="zh">取得 SRT 證照</span><span class="q-tag">Q2</span></li>
-              <li><span class="en">Write v1 English website copy</span><span class="zh">撰寫 v1 英文網站文案</span><span class="q-tag">Q2</span></li>
-              <li><span class="en">US-market awareness: 3 marketing experiments</span><span class="zh">美國市場聲量:3 個行銷實驗</span><span class="q-tag">Q3</span></li>
-              <li><span class="en">Confirm foreign certs qualify for 安全人員 with lawyer</span><span class="zh">與律師確認國外證照可否認列 安全人員</span><span class="q-tag">Q3</span></li>
-              <li><span class="en">Relocate TW, begin 溯溪類 pathway</span><span class="zh">搬回台灣,啟動 溯溪類 證照路徑</span><span class="q-tag">Q4</span></li>
-            </ol>
-          </div>
-        </article>
-
-        <article class="crew-entry">
-          <div class="name">Apple<span class="surname"><span class="en">Taiwanese · sales + Japanese channel</span><span class="zh">台灣人 · 銷售 + 日本市場通路</span></span></div>
-          <div class="role">
-            <div class="tag"><span class="en">Strength</span><span class="zh">專長</span></div>
-            <div class="strength"><span class="en">Strongest social / sales skills in the group. Runs customer relations and opens the Japanese-market channel.</span><span class="zh">全隊最強的社交與銷售力。主責客戶關係,並打開日本市場通路。</span></div>
-            <dl>
-              <dt><span class="en">Role</span><span class="zh">角色</span></dt><dd><span class="en">Sales · CS · Japanese channel · Support guide</span><span class="zh">銷售 · 客服 · 日本市場通路 · 支援嚮導</span></dd>
-              <dt><span class="en">Cert path</span><span class="zh">證照路徑</span></dt><dd>紅十字會 救生員 · CPR/BLS</dd>
-              <dt><span class="en">Languages</span><span class="zh">語言</span></dt><dd><span class="en">中文 · 日本語 · English (good)</span><span class="zh">中文 · 日文 · 英文(良好)</span></dd>
-              <dt><span class="en">Location</span><span class="zh">所在地</span></dt><dd><span class="en">Taiwan</span><span class="zh">台灣</span></dd>
-            </dl>
-          </div>
-          <div class="tasks">
-            <div class="tlabel"><span><span class="en">Tasks assigned</span><span class="zh">任務分派</span></span><span><span class="en">Quarter</span><span class="zh">季度</span></span></div>
-            <ol>
-              <li class="p0"><span class="en">Enroll 紅十字會 救生員 + CPR/BLS</span><span class="zh">報名 紅十字會 救生員 + CPR/BLS</span><span class="q-tag">Q1</span></li>
-              <li><span class="en">Initial Japanese-market desk research</span><span class="zh">日本市場初步桌面研究</span><span class="q-tag">Q1</span></li>
-              <li class="p0"><span class="en">Complete 救生員</span><span class="zh">取得 救生員</span><span class="q-tag">Q2</span></li>
-              <li><span class="en">Customer ops SOP (inquiry → waiver → trip)</span><span class="zh">客服作業 SOP(詢問 → 免責同意 → 出團)</span><span class="q-tag">Q2</span></li>
-              <li class="p0"><span class="en">KKday + Klook listings live</span><span class="zh">KKday + Klook 正式上架</span><span class="q-tag">Q3</span></li>
-              <li><span class="en">Japanese-language copy for top SKUs</span><span class="zh">為主力路線撰寫日文文案</span><span class="q-tag">Q3</span></li>
-              <li><span class="en">Lead hospitality on-trip for Q3 trial runs</span><span class="zh">Q3 試行團擔任接待主責</span><span class="q-tag">Q3</span></li>
-              <li><span class="en">VELTRA + Locotabi applications</span><span class="zh">VELTRA + Locotabi 申請</span><span class="q-tag">Q4</span></li>
-              <li><span class="en">IG + TikTok top-of-funnel content plan</span><span class="zh">IG + TikTok 上層漏斗內容規劃</span><span class="q-tag">Q4</span></li>
-            </ol>
-          </div>
-        </article>
-
-      </div>
-    </section>
-
-    <hr class="rule">
-
-    <!-- ===================== BUDGET ===================== -->
-    <section>
-      <div class="sectnum"><span class="en">§ 03 · Budget</span><span class="zh">§ 03 · 預算</span></div>
-      <h2 style="font-family: var(--serif); font-size: 32px; font-weight: 500; letter-spacing: -0.015em; color: var(--ink);"><span class="en">Budget · NT$100,000</span><span class="zh">預算 · NT$100,000</span></h2>
-
-      <div class="budget">
-        <table class="ledger">
-          <tr><td class="cat"><span class="en">Certifications — 溯溪類 + 救生員 ×2 + SRT</span><span class="zh">證照 — 溯溪類 + 救生員 ×2 + SRT</span></td><td class="num">NT$ 40,000</td></tr>
-          <tr><td class="cat"><span class="en">Legal — lawyer + accountant consultation</span><span class="zh">法律 — 律師 + 會計師諮詢</span></td><td class="num">NT$ 15,000</td></tr>
-          <tr><td class="cat"><span class="en">Entity registration + FIA fees</span><span class="zh">公司設立 + FIA 外資申報費用</span></td><td class="num">NT$ 10,000</td></tr>
-          <tr><td class="cat"><span class="en">Core gear — helmets, wetsuits, throw bags, ropes</span><span class="zh">核心裝備 — 頭盔、防寒衣、拋繩袋、繩索</span></td><td class="num">NT$ 20,000</td></tr>
-          <tr><td class="cat"><span class="en">Domain + website hosting · year 1</span><span class="zh">網域 + 網站代管 · 第一年</span></td><td class="num">NT$ 5,000</td></tr>
-          <tr><td class="cat"><span class="en">Buffer / contingency</span><span class="zh">預備金 / 應變</span></td><td class="num">NT$ 10,000</td></tr>
-          <tr class="total"><td><span class="en">Total</span><span class="zh">合計</span></td><td class="num">NT$ 100,000</td></tr>
-        </table>
-
-        <div class="caution">
-          <div class="tag"><span class="en">Open gap</span><span class="zh">未解缺口</span></div>
-          <p><span class="en">Regulatory doc models <em>true</em> startup cost closer to NT$130k once public-liability insurance (~NT$35k/yr) is included. Options: (a) defer one 救生員 cert to Year 2, (b) founders contribute personal gear, or (c) use Klook's per-trip insurance rider instead of an annual policy in Year 1. Decide at first weekly sync.</span><span class="zh">法規文件試算,若納入 公共意外責任保險(約 NT$35k/年),<em>真實</em> 啟動成本更接近 NT$130k。選項:(a)將其中一張 救生員 延至第二年、(b)創辦人自備個人裝備、或(c)第一年採用 Klook 單趟加保,暫不買年保。首次週會定案。</span></p>
-          <p style="margin-top: 14px;"><span class="en">Paid-in capital of <strong style="color: var(--ink);">NT$500,000</strong> for the 有限公司 is separate working capital — recoverable, not spent.</span><span class="zh">有限公司 所需之實收資本 <strong style="color: var(--ink);">NT$500,000</strong> 屬於另計營運資金,可收回、並非支出。</span></p>
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <footer class="foot">
-    <div class="wrap inner">
-      <div class="brandmark">Outdoor<em style="color: var(--clay);">·</em>Boys</div>
-      <div class="meta"><span class="en">v1 · Updated 21 April 2026 · Dino</span><span class="zh">v1 · 更新於 2026 年 4 月 21 日 · Dino</span></div>
-      <div class="meta"><a href="regulatory.html" style="color: var(--mute);"><span class="en">→ Regulations</span><span class="zh">→ 法規</span></a> &nbsp;·&nbsp; <a href="certs.html" style="color: var(--mute);"><span class="en">→ Licenses</span><span class="zh">→ 證照</span></a></div>
-    </div>
-  </footer>
-
-  <script>
-    // fade-in on scroll
-    const io = new IntersectionObserver((entries) => {
-      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('inview'); });
-    }, { threshold: 0.08 });
-    document.querySelectorAll('section, .crew-entry, .reg-entry, .dol-cell').forEach(el => {
-      el.classList.add('fade');
-      io.observe(el);
-    });
-  </script>
-
+</div>
 </body>
 </html>
