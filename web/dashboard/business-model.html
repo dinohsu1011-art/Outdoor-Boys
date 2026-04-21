@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Outdoor Boys — Business Model</title>
+  <meta name="description" content="Live revenue and expense model for Outdoor Boys. Editable by all founders." />
+  <script src="i18n.js?v=3"></script>
+  <link rel="stylesheet" href="styles.css?v=5">
+  <style>
+    /* === sheet embed === */
+    .sheet-frame {
+      width: 100%;
+      height: calc(100vh - 180px);
+      min-height: 720px;
+      border: 1px solid var(--rule);
+      border-radius: 0;
+      background: var(--paper-warm);
+      display: block;
+    }
+
+    .sheet-actions {
+      display: flex;
+      gap: 12px;
+      margin: 16px 0 24px;
+      flex-wrap: wrap;
+    }
+    .sheet-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 9px 16px;
+      border: 1px solid var(--ink);
+      background: var(--ink);
+      color: var(--paper);
+      font-family: var(--sans);
+      font-size: 13px;
+      font-weight: 600;
+      text-decoration: none;
+      letter-spacing: 0.01em;
+      cursor: pointer;
+      transition: background .15s, color .15s;
+    }
+    .sheet-btn:hover { background: var(--paper); color: var(--ink); }
+    .sheet-btn.ghost {
+      background: transparent;
+      color: var(--ink);
+    }
+    .sheet-btn.ghost:hover { background: var(--ink); color: var(--paper); }
+
+    /* === setup state === */
+    .setup-card {
+      border: 2px solid var(--ink);
+      padding: 40px 44px;
+      margin-top: 24px;
+      background: var(--paper-warm);
+      max-width: 760px;
+    }
+    .setup-card h2 {
+      font-family: var(--serif);
+      font-size: 28px;
+      font-weight: 500;
+      margin: 0 0 8px;
+      color: var(--ink);
+    }
+    .setup-card .lede {
+      font-family: var(--serif);
+      font-style: italic;
+      color: var(--mute);
+      margin-bottom: 28px;
+      font-size: 16px;
+    }
+    .setup-card ol {
+      padding-left: 20px;
+      margin: 0 0 24px;
+      line-height: 1.75;
+      color: var(--ink-body);
+    }
+    .setup-card ol li { margin-bottom: 10px; }
+    .setup-card code {
+      font-family: var(--mono);
+      background: var(--paper);
+      padding: 2px 6px;
+      border: 1px solid var(--rule);
+      font-size: 12px;
+    }
+    .setup-input-row {
+      display: flex;
+      gap: 8px;
+      margin-top: 12px;
+      flex-wrap: wrap;
+    }
+    .setup-input-row input {
+      flex: 1;
+      min-width: 300px;
+      padding: 10px 12px;
+      border: 1px solid var(--rule);
+      font-family: var(--mono);
+      font-size: 13px;
+      background: var(--paper);
+      color: var(--ink);
+    }
+    .setup-input-row input:focus {
+      outline: none;
+      border-color: var(--ink);
+    }
+    .warn-note {
+      margin-top: 20px;
+      padding: 14px 18px;
+      border-left: 3px solid var(--clay);
+      background: var(--paper);
+      font-size: 14px;
+      color: var(--ink-body);
+      line-height: 1.6;
+    }
+    .warn-note b { color: var(--ink); }
+
+    .meta-row {
+      display: flex;
+      align-items: baseline;
+      gap: 24px;
+      flex-wrap: wrap;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--rule);
+      margin-bottom: 20px;
+    }
+    .meta-row .mono { font-size: 11px; }
+  </style>
+</head>
+<body>
+
+  <nav class="top">
+    <a href="index.html" class="brand">Outdoor<em>·</em>Boys</a>
+    <ul>
+      <li><a class="link" href="index.html"><span class="en">Field Log</span><span class="zh">儀表板</span></a></li>
+      <li><a class="link" href="business-plan.html"><span class="en">Business Plan</span><span class="zh">商業計畫</span></a></li>
+      <li><a class="link active" href="business-model.html"><span class="en">Model</span><span class="zh">模型</span></a></li>
+      <li><a class="link" href="regulatory.html"><span class="en">Regulations</span><span class="zh">法規</span></a></li>
+      <li><a class="link" href="certs.html"><span class="en">Licenses</span><span class="zh">證照</span></a></li>
+      <li><button class="lang-toggle" onclick="toggleLang()"><span class="en">中</span><span class="zh">EN</span></button></li>
+    </ul>
+  </nav>
+
+  <main class="wrap">
+
+    <!-- HEADER -->
+    <section style="padding: 48px 0 24px;">
+      <div class="mono sectnum"><span class="en">Live model · linked to Google Sheet</span><span class="zh">動態模型 · 連結 Google Sheet</span></div>
+
+      <h1 style="font-family: var(--serif); font-size: 44px; font-weight: 500; letter-spacing: -0.015em; color: var(--ink); line-height: 1.1; margin-top: 8px;">
+        <span class="en">Revenue &amp; Expense Model</span><span class="zh">收入與成本模型</span>
+      </h1>
+
+      <p style="font-family: var(--serif); font-size: 18px; line-height: 1.5; color: var(--ink-body); max-width: 720px; margin-top: 16px;">
+        <span class="en">The sheet below is the live financial model. Edit cells, enter formulas, add scenarios — changes save to Google and are visible to all founders in real time.</span>
+        <span class="zh">下方為即時財務模型。直接編輯儲存格、輸入公式、新增情境 — 所有修改即時儲存並對四位創辦人可見。</span>
+      </p>
+    </section>
+
+    <!-- MODEL PANEL -->
+    <section style="padding-bottom: 96px;">
+
+      <div id="model-root">
+        <!-- JS injects either the iframe or the setup card here -->
+      </div>
+
+    </section>
+
+  </main>
+
+  <script>
+    /* ─────────────────────────────────────────────────────────────
+       CONFIG
+       ─────────────────────────────────────────────────────────────
+       After creating your Google Sheet and sharing it with the team
+       ("Anyone with the link → Editor"), paste the Sheet ID here.
+
+       The Sheet ID is the string between /d/ and /edit in the URL:
+         https://docs.google.com/spreadsheets/d/>>>THIS_PART<<</edit
+    ───────────────────────────────────────────────────────────── */
+    const SHEET_ID = ''; // ← paste Sheet ID here, then commit & push
+
+    /* ──────────────── no changes needed below ──────────────── */
+
+    const root = document.getElementById('model-root');
+
+    function renderSheet(id) {
+      const editUrl = `https://docs.google.com/spreadsheets/d/${id}/edit?usp=sharing`;
+      const embedUrl = `https://docs.google.com/spreadsheets/d/${id}/edit?usp=sharing&rm=embedded&widget=true&headers=true`;
+
+      root.innerHTML = `
+        <div class="meta-row">
+          <div class="mono">
+            <span class="en">SOURCE</span><span class="zh">資料來源</span>
+            &nbsp;·&nbsp; Google Sheets
+            &nbsp;·&nbsp; <span class="en">edits sync live</span><span class="zh">即時同步</span>
+          </div>
+        </div>
+
+        <div class="sheet-actions">
+          <a class="sheet-btn" href="${editUrl}" target="_blank" rel="noopener">
+            <span class="en">Open in Sheets ↗</span><span class="zh">在 Sheets 開啟 ↗</span>
+          </a>
+          <a class="sheet-btn ghost" href="${editUrl}#gid=0" target="_blank" rel="noopener">
+            <span class="en">Full-screen view</span><span class="zh">全螢幕檢視</span>
+          </a>
+        </div>
+
+        <iframe
+          class="sheet-frame"
+          src="${embedUrl}"
+          title="Outdoor Boys financial model"
+          loading="lazy"
+          allowfullscreen
+        ></iframe>
+
+        <p style="margin-top: 24px; font-size: 14px; color: var(--mute); max-width: 680px; line-height: 1.6;">
+          <span class="en">Tip: if the embed feels cramped, hit "Open in Sheets" for the full interface. Anyone on the founders' list can edit; changes are saved automatically.</span>
+          <span class="zh">提示:若嵌入版面太擠,點「在 Sheets 開啟」使用完整介面。創辦人名單上的成員皆可編輯,修改自動儲存。</span>
+        </p>
+      `;
+    }
+
+    function renderSetup() {
+      root.innerHTML = `
+        <div class="setup-card">
+          <h2><span class="en">One-time setup</span><span class="zh">一次性設定</span></h2>
+          <p class="lede"><span class="en">Two minutes. Then the model lives here.</span><span class="zh">兩分鐘完成,模型就在此顯示。</span></p>
+
+          <ol>
+            <li>
+              <span class="en">Open <a href="https://sheets.new" target="_blank" rel="noopener">sheets.new</a> to create a blank Google Sheet. Title it <b>"Outdoor Boys — Business Model"</b>.</span>
+              <span class="zh">前往 <a href="https://sheets.new" target="_blank" rel="noopener">sheets.new</a> 建立空白 Google Sheet,命名為 <b>「Outdoor Boys — Business Model」</b>。</span>
+            </li>
+            <li>
+              <span class="en">Click <b>Share</b> (top-right) → invite the four founders as <b>Editors</b>, OR set "Anyone with the link" to <b>Editor</b>.</span>
+              <span class="zh">點右上角 <b>共用</b> → 將四位創辦人設為 <b>編輯者</b>,或將「知道連結的使用者」權限設為 <b>編輯者</b>。</span>
+            </li>
+            <li>
+              <span class="en">Copy the Sheet ID from the URL — it's the long string between <code>/d/</code> and <code>/edit</code>.</span>
+              <span class="zh">從網址複製 Sheet ID — 位於 <code>/d/</code> 與 <code>/edit</code> 之間的長字串。</span>
+            </li>
+            <li>
+              <span class="en">Paste it below to preview, then commit the ID into <code>business-model.html</code> (line <code>const SHEET_ID = '…'</code>) so every teammate sees the same sheet.</span>
+              <span class="zh">下方貼上預覽,再將 ID 寫入 <code>business-model.html</code>(<code>const SHEET_ID = '…'</code> 那一行),所有成員就能看到同一份模型。</span>
+            </li>
+          </ol>
+
+          <label class="mono" style="font-size: 11px; display:block; margin-top: 24px;">
+            <span class="en">Sheet ID (preview only — this browser)</span><span class="zh">Sheet ID(僅此瀏覽器預覽)</span>
+          </label>
+          <div class="setup-input-row">
+            <input id="sheet-id-input" type="text" placeholder="1aB2cD3eF4...xyz" />
+            <button class="sheet-btn" onclick="previewSheet()"><span class="en">Preview →</span><span class="zh">預覽 →</span></button>
+          </div>
+
+          <div class="warn-note">
+            <b><span class="en">Why not the Sheets API?</span><span class="zh">為何不用 Sheets API?</span></b><br>
+            <span class="en">Formulas, charts, collaborative cursors, and conditional formatting need the full Sheets UI. An iframe embed gives you all of that free. The API gives you cell values — not a spreadsheet.</span>
+            <span class="zh">公式、圖表、協作游標、條件格式都需要完整的 Sheets 介面。iframe 嵌入可直接獲得這一切;API 只能讀寫儲存格數值,無法取代試算表本身。</span>
+          </div>
+        </div>
+      `;
+
+      // preload any saved preview id
+      const saved = localStorage.getItem('ob-preview-sheet-id');
+      if (saved) document.getElementById('sheet-id-input').value = saved;
+    }
+
+    function previewSheet() {
+      const raw = document.getElementById('sheet-id-input').value.trim();
+      if (!raw) return;
+      // accept either raw ID or full URL
+      const m = raw.match(/\/d\/([a-zA-Z0-9-_]+)/);
+      const id = m ? m[1] : raw;
+      localStorage.setItem('ob-preview-sheet-id', id);
+      renderSheet(id);
+    }
+
+    // boot
+    if (SHEET_ID) {
+      renderSheet(SHEET_ID);
+    } else {
+      const previewId = localStorage.getItem('ob-preview-sheet-id');
+      if (previewId) {
+        renderSheet(previewId);
+      } else {
+        renderSetup();
+      }
+    }
+  </script>
+
+</body>
+</html>
